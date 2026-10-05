@@ -208,17 +208,11 @@ Also completed: Generative AI with Diffusion Models (AWS, Sep 2025).
 
 Regenerated daily by a GitHub Action in this repo, from git history and the GitHub API. No third-party cards, no counters, no tracking.
 
-
 <img src="https://raw.githubusercontent.com/KrishAryan12/KrishAryan12/output/stats.svg" width="100%" alt="By the numbers: contributions in the last year, public commits and repos, code lines added and deleted, and code by language. Counted from git history; data files, lockfiles, notebooks and generated files are excluded.">
-
 
 <img src="https://raw.githubusercontent.com/KrishAryan12/KrishAryan12/output/activity.svg" width="100%" alt="Recent public activity on GitHub, regenerated daily.">
 
-
 <img src="https://raw.githubusercontent.com/KrishAryan12/KrishAryan12/output/scoreboard.svg" width="100%" alt="My portfolio, audited weekly by my own tool, Teardown.">
-
-
-
 
 <picture>
   <source media="(prefers-reduced-motion: reduce)" srcset="assets/dividers/divider-still.png">

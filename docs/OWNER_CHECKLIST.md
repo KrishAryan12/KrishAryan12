@@ -30,7 +30,7 @@ confirm it.
   names or code. The daily Action reads the count through the GitHub API, so the "contributions,
   last year" figure in the stats panel rises the next morning. If it reaches 150, the 3D
   contribution graph switches itself on.
-- [ ] **Bio** (your pick, 115 characters): `Technically an SRE. Realistically, I convince AI agents to do the detective work. Not demos. Running in production.`
+- [ ] **Bio** (your pick, 115 characters; not set yet as of 2026-10-06): `Technically an SRE. Realistically, I convince AI agents to do the detective work. Not demos. Running in production.`
 - [ ] **Location:** Bengaluru, India · **Website:** https://krisharyan.vercel.app · **Social:** https://www.linkedin.com/in/krisharyan
 
 ## 3. Headline everywhere
@@ -79,11 +79,12 @@ The README now uses **SRE × AI Engineer**, which matches the portfolio. Update 
   does: "LSTM experiment predicting BTC daily max drawdown, with a simple threshold strategy,
   Sharpe/Sortino checks and headline sentiment." The current description promises algorithmic
   trading and backtesting the notebook does not have.
-- [ ] Add About descriptions and topics:
-  - **Teardown:** "Take any website apart: real-browser audit, prioritised fix list and an agent-ready brief." Topics: `website-audit`, `accessibility`, `seo`, `playwright`, `nextjs`, `ai-agents`. Website: https://teardown-lab.vercel.app
-  - **stockroom:** "Inventory and order management: FastAPI, React, PostgreSQL, transactional orders with row locking and idempotency." Topics: `fastapi`, `react`, `postgresql`, `docker`, `sqlalchemy`. Website: https://stockroom-fv47.onrender.com/
-  - **Privacy-Preserving-Border-Surveillance-System:** "Research code for the I-SMAC 2024 paper: motion-gated YOLOv4-tiny detection with vision-model frame captions." Topics: `computer-vision`, `yolov4`, `opencv`, `research`
-  - You said you have already updated these repos; I'll re-read them and adjust the earlier-work descriptions if needed.
+- [x] About descriptions and topics added to Teardown, stockroom and the border-surveillance repo
+  (checked 2026-10-06).
+- [ ] The BTC repo still has the old description (algorithmic trading, backtesting). Rewrite it or
+  unpin it (see above).
+- [ ] Optional: give this profile repo (`KrishAryan12/KrishAryan12`) an About line, for example
+  "Generator for my GitHub profile: Three.js hero, outlined-SVG panels, daily telemetry Action."
 - [ ] Optional (after the profile is approved): I can open pull requests with short, honest READMEs
   for the three repos that have none.
 

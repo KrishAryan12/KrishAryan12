@@ -14,6 +14,8 @@ const ALLOW: Array<{ host: RegExp; reason: string }> = [
   { host: /\.onrender\.com$/, reason: 'Render free tier sleeps; first request can time out' },
   { host: /(^|\.)credly\.com$/, reason: 'Credly sometimes rate limits scripts' },
   { host: /^raw\.githubusercontent\.com$/, reason: 'output branch may not exist on a fresh fork' },
+  { host: /(^|\.)deeplearning\.ai$/, reason: 'bot wall: 403 to datacenter IPs (200 from a browser, checked 2026-10-06)' },
+  { host: /^academy\.langchain\.com$/, reason: 'bot wall: 403 to datacenter IPs (200 from a browser, checked 2026-10-06)' },
 ];
 
 const readme = readFileSync(join(ROOT, 'README.md'), 'utf8');
