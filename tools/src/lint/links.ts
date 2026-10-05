@@ -40,6 +40,8 @@ for (const r of results.sort((a, b) => a.url.localeCompare(b.url))) {
   const tag = ok ? 'ok  ' : allow ? 'warn' : 'FAIL';
   if (!ok && !allow) failed++;
   console.log(`${tag} ${String(r.status).padEnd(12)} ${r.url}${!ok && allow ? `  (${allow.reason})` : ''}`);
+  // In Actions, surface results as annotations (readable without opening the log).
+  if (process.env.GITHUB_ACTIONS && !ok) console.log(`::${allow ? 'warning' : 'error'} title=link ${r.status}::${r.url}`);
 }
 console.log(`${results.length} links, ${failed} failed`);
 if (failed) process.exit(1);
