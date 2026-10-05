@@ -1,0 +1,10 @@
+# Private owner inputs: never commit
+inputs/
+
+node_modules/
+tools/render3d/out/
+.preview/
+.qa/
+*.log
+.DS_Store
+Thumbs.db
