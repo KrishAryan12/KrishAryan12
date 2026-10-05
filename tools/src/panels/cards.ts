@@ -38,7 +38,9 @@ function card(o: CardOpts): PanelOutput {
   doc.add(backgroundGrid(2, 2, CW - 4, CH - 4, 25, 0.03));
   doc.add(doc.text(c.name, 28, 98, { font: 'displayBold', size: c.name.length > 16 ? 28 : 32, fill: C.white }));
   doc.add(doc.text(c.kicker, 28, 126, { font: 'mono', size: 15, fill: C.cyan }));
-  const lines = doc.atlas.wrap(c.body, CW - 56, 'mono', 14.5).slice(0, 5);
+  const lines = doc.atlas.wrap(c.body, CW - 56, 'mono', 14.5);
+  // Never cut copy silently: overflowing text fails the build so the copy gets edited.
+  if (lines.length > 5) throw new Error(`${o.file}: body needs ${lines.length} lines, max 5. Shorten it in content/profile.json.`);
   lines.forEach((l, i) => doc.add(doc.text(l, 28, 158 + i * 21, { font: 'mono', size: 14.5, fill: C.white, opacity: 0.88 })));
   doc.add(`<path d="M28 ${CH - 46}H${CW - 28}" stroke="${C.cyanMid}" stroke-opacity=".3"/>`);
   if (c.stat) doc.add(doc.text(c.stat, 28, CH - 20, { font: 'display', size: 17, fill: C.cyan, tracking: 0.5 }));

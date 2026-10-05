@@ -43,7 +43,7 @@ export function investigation(p: Profile, d: Derived): PanelOutput {
   lines.push({ kind: 'foot', text: inv.footer });
 
   const H = top + lines.length * lineH + 6;
-  const printEnd = 9.5; // seconds by which every line is printed
+  const printEnd = 5; // seconds by which every line is printed; the full trace then holds ~9 s
   const printable = lines.filter((l) => l.kind !== 'gap').length;
   const css: string[] = [];
   const stillSel: string[] = [];

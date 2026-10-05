@@ -31,6 +31,8 @@ export const HERO = {
   loop: tokens.motion.heroLoop,
   /** The powered-on title frame, used for the poster. */
   posterT: 6.2,
+  /** Loop phase of the first frame. */
+  startT: 5.6,
 };
 
 /** Advance in 100-unit em; a lone space reports NaN in some opentype.js builds. */
@@ -120,7 +122,8 @@ async function main(): Promise<void> {
   if (!args.has('--encode-only')) {
     if (existsSync(FRAMES)) rmSync(FRAMES, { recursive: true });
     const n = HERO.fps * HERO.loop;
-    const times = Array.from({ length: n }, (_, i) => ({ t: i / HERO.fps, name: `f${String(i).padStart(4, '0')}` }));
+    // Start the loop on the lit title, so the first frame (what a slow connection shows first) is the name.
+    const times = Array.from({ length: n }, (_, i) => ({ t: (i / HERO.fps + HERO.startT) % HERO.loop, name: `f${String(i).padStart(4, '0')}` }));
     times.push({ t: HERO.posterT, name: 'poster' });
     await renderFrames(times);
   }

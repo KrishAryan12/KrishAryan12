@@ -197,7 +197,7 @@
       {
         "name": "TraceLens",
         "kicker": "Autonomous incident investigation",
-        "body": "Investigates incidents across logs, metrics and alerts, then returns ranked, confidence-scored hypotheses with evidence, a Jira ticket and a Slack summary. Not a dashboard. Not a chatbot.",
+        "body": "Investigates incidents across logs, metrics and alerts, then returns ranked, confidence-scored hypotheses with evidence, a Jira ticket and a Slack summary.",
         "stat": "480× faster triage",
         "claim": "C04,C06,C09"
       },
