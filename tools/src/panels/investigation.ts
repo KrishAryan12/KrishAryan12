@@ -112,6 +112,9 @@ export function investigation(p: Profile, d: Derived): PanelOutput {
   css.push(`.st-a{opacity:0;animation:sta ${LOOP}s steps(1) infinite}@keyframes sta{0%{opacity:1}${r(resolveAt)}%{opacity:0}}`);
   css.push(`.st-b{animation:stb ${LOOP}s steps(1) infinite}@keyframes stb{0%{opacity:0}${r(resolveAt)}%{opacity:1}}`);
   css.push(`.cur{animation:cur 1s steps(1) infinite}@keyframes cur{50%{opacity:0}}`);
+  // Start the loop in its hold phase: a visitor who scrolls here sees the finished trace first,
+  // then watches it replay. (Same attribute specificity as the class rules, declared later, so it wins.)
+  css.push(`[class^=q],[class^=b],.st-a,.st-b{animation-delay:-${r(0.5 + printEnd + 1.5)}s}`);
   doc.o.css = css.join('');
   doc.o.still = `${stillSel.join(',')}{opacity:1;transform:none}.st-a{opacity:0}.st-b{opacity:1}`;
 

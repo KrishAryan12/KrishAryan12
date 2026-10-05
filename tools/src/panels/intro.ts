@@ -39,6 +39,8 @@ export function boot(p: Profile): PanelOutput {
     css.push(`.l${i}{animation:l${i} ${loop}s linear infinite}@keyframes l${i}{0%,${r(on)}%{opacity:0}${r(on + 1.5)}%,92%{opacity:1}97%,100%{opacity:0}}`);
   });
   css.push(`.cur{animation:cur 1s steps(1) infinite}@keyframes cur{50%{opacity:0}}`);
+  // Begin in the hold phase so the strip is never seen empty.
+  css.push(`[class^=l]{animation-delay:-${r(0.6 + rows.length * 0.9 + 1)}s}`);
   const doc = new SvgDoc({
     width: W,
     height: H,
