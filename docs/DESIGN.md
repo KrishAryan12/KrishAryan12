@@ -38,8 +38,8 @@ The brief's starting palette passed AA unchanged, so it was kept. Two tokens wer
 
 ## Motifs
 
-- **Light trails:** hero cycles and walls; the 800×28 divider (one trail sweep, an orange pulse near
-  the end that is resolved into a cyan ring).
+- **Light trails:** hero cycles and walls; the 3D section-break GIF (a cycle passes an orange
+  incident node and resolves it to cyan with a ring pulse).
 - **Isometric tiles:** stack items sit on rhombus tiles lit from the top-left.
 - **Terminal panels:** boot strip and the investigation.
 - **Chrome:** 1.5-unit cyan border at 55% opacity, inner hairline, 10-unit radius, corner ticks,
@@ -81,7 +81,7 @@ Desktop (column ~830–880 px):
 ## Websites with a point of view   pitch, [Teardown][Portfolio], [Start a conversation]
 ## Research and credentials  [IEEE][Scopus], links, [earlier work], [credentials] <details>
  ─────────── divider ───────────
-## Live telemetry   [activity] [scoreboard] ([3D graph] only ≥150 contributions)
+## Live telemetry   [by the numbers] [activity] [scoreboard] ([3D graph] only ≥150 contributions)
 ## Uplink   [Portfolio][LinkedIn][Hire me – free][Résumé AI][Résumé SRE]
  End of line. · last regenerated · how it's built · inspired-by note
 ```
@@ -106,7 +106,8 @@ panels scale down with text staying at or above 11 px.
 | `panels/earlier-work.svg` | 800×~560 | 100% | 50 KB | none | — |
 | `panels/credentials.svg` | 800×~650 | 100% | 60 KB | none | — |
 | `panels/btn-*.svg` (6) | 260/400×64 | 260/400 | 12 KB | none | — |
-| `dividers/divider.svg` | 800×28 | 100% | 15 KB | trail + resolved pulse (12 s) | resolved ring |
+| `dividers/divider.gif` | 1200×96 | 100% | 1 MB (owner request) | cycle passes and resolves an incident (4 s) | `divider-still.png` |
+| `output/stats.svg` | 800×~520 | 100% | 60 KB | language bar grows once | full bar |
 | `output/activity.svg` | 800×var | 100% | 60 KB | none | — |
 | `output/scoreboard.svg` | 800×330 | 100% | 40 KB | none | — |
 
@@ -121,7 +122,7 @@ panels scale down with text staying at or above 11 px.
   `prefers-reduced-motion: reduce` (which sets `animation: none`) and any renderer without CSS
   animation both show the designed still frame.
 - Orange appears in exactly four places: the hero incident cycle, the investigation's
-  INVESTIGATING chip (which resolves to cyan), the divider's incident pulse (resolved to cyan), and
+  INVESTIGATING chip (which resolves to cyan), the section break's incident node (resolved to cyan), and
   any scoreboard value below 50 (labelled "fix me"). Colour never carries meaning alone: each use
   pairs with a label or a shape change.
 

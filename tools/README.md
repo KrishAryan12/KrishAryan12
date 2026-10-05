@@ -6,10 +6,10 @@ own GitHub Action.
 
 ```
 content/profile.json ──┐
-tools/src/tokens ──────┼─► tools/src/panels/*  ─► assets/panels/*.svg, assets/dividers/*.svg
-                       ├─► tools/render3d      ─► assets/hero.webp, assets/hero-poster.png
+tools/src/tokens ──────┼─► tools/src/panels/*  ─► assets/panels/*.svg
+                       ├─► tools/render3d      ─► assets/hero.webp, assets/dividers/divider.gif (+ stills)
 README.template.md ────┴─► tools/src/readme    ─► README.md
-GitHub API + Teardown ───► tools/src/dynamic   ─► output branch: activity.svg, scoreboard.svg, stamp.svg, state.json
+git + GitHub API + Teardown ─► tools/src/dynamic ─► output branch: stats.svg, activity.svg, scoreboard.svg, stamp.svg, state.json
 ```
 
 ## Commands
@@ -23,7 +23,8 @@ Node 22+ and pnpm. `pnpm install`, then:
 | `pnpm build:readme` | fill `README.template.md` from the profile (tenure is computed, never hard-coded) |
 | `pnpm render:hero` | record the Three.js hero frame by frame and encode GIF / WebP / APNG candidates (needs ffmpeg) |
 | `pnpm render:hero --stills` | a few key frames for quick review |
-| `pnpm dynamic --out .dynamic [--scoreboard]` | dry-run the daily telemetry |
+| `pnpm render:hero --divider` | record and encode the 3D section-break GIF and its reduced-motion still |
+| `pnpm dynamic --out .dynamic [--scoreboard] [--repos a,b]` | dry-run the daily telemetry (`--repos` skips the API listing when rate limited) |
 | `pnpm check` | typecheck plus privacy, claims, SVG, text-size, size and accessibility lints |
 | `pnpm lint:links` | resolve every external link in the README |
 | `pnpm preview` | serve a GitHub-like rendering of the README (light and dark) |
@@ -39,10 +40,10 @@ tools/src/svg        SvgDoc, outlined text (glyph atlas), panel chrome, glows, g
 tools/src/logos      Simple Icons access in one treatment, text chips for missing marks
 tools/src/panels     one function per panel; build.ts writes them all
 tools/src/readme     template filler
-tools/src/dynamic    daily telemetry generator (activity, Teardown scoreboard, stamp, state)
+tools/src/dynamic    daily telemetry generator (stats from git, activity, Teardown scoreboard, stamp, state)
 tools/src/lint       quality gates and link check
 tools/src/preview    GitHub-like preview and Playwright QA screenshots
-tools/render3d       Three.js scene (reusable), deterministic recorder, encoders
+tools/render3d       Three.js hero and section-break scenes (reusable), deterministic recorder, encoders
 ```
 
 ## Things worth knowing

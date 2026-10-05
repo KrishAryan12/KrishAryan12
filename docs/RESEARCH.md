@@ -63,9 +63,9 @@ same register ("What TraceLens does to an incident, done to me instead.", "0 hum
 
 ## Contradictions found
 
-1. **Headline wording.** Resume: "AI Engineer · Site Reliability Engineer". Portfolio: "SRE × AI Engineer". LinkedIn: "SRE @ Netradyne · building AI agents…". owner.json `titleLine`: "AI Engineer × Site Reliability Engineer" (used on the README).
+1. **Headline wording.** Resume: "AI Engineer · Site Reliability Engineer". Portfolio: "SRE × AI Engineer". LinkedIn: "SRE @ Netradyne · building AI agents…". owner.json `titleLine`: "AI Engineer × Site Reliability Engineer" **Resolved 2026-10-06:** the owner chose "SRE × AI Engineer".
 2. **Role history.** Resume: a single title, "Software Engineer, Site Reliability Engineering & AI Tooling", from Feb 2025. LinkedIn and the portfolio handbook: Cloud Intern → Associate SRE → Software Engineer - SRE. The README uses the LinkedIn progression.
-3. **AlertFlow scope.** Resume and portfolio /work: 185+ services. LinkedIn and handbook: 150+. Neither number is published.
+3. **AlertFlow scope.** Resume and portfolio /work: 185+ services. LinkedIn and handbook: 150+. **Resolved 2026-10-06:** the owner confirmed it started on 150+ and now covers 215+.
 4. **Climb speed.** Handbook heading says "Intern → SWE in 18 months"; its own dates (Feb 2025 → Feb 2026) give 12 months. The README computes 12.
 5. **Portfolio `og:url`** points to `https://krisharyan.dev`, which does not resolve. The site lives at krisharyan.vercel.app.
 6. **LinkedIn URL forms.** `linkedin.com/in/krisharyan/` (portfolio), `www.linkedin.com/in/krisharyan` (resume, LinkedIn PDF), and certification links carrying a `profileId` query string (portfolio handbook). The README uses `https://www.linkedin.com/in/krisharyan`; it returns 999 to scripts, as LinkedIn does for all bots, so it is allow-listed in the link check.

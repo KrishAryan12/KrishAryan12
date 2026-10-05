@@ -87,7 +87,7 @@ export interface Profile {
   earlierWork: Array<{ name: string; what: string; tags: string; repo: string | null; claim: string }>;
   certifications: Certification[];
   education: { degree: string; school: string; years: string; gpa: string; claim: string };
-  dynamic: { outputBranch: string; contribGraph: 'auto' | 'on' | 'off'; contribThreshold: number; scoreboard: boolean };
+  dynamic: { outputBranch: string; contribGraph: 'auto' | 'on' | 'off'; contribThreshold: number; scoreboard: boolean; stats?: boolean };
 }
 
 export function loadProfile(): Profile {

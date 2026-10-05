@@ -2,11 +2,11 @@
 
 <picture>
   <source media="(prefers-reduced-motion: reduce)" srcset="assets/hero-poster.png">
-  <img src="assets/hero.webp" width="100%" alt="Krish Aryan, AI Engineer and Site Reliability Engineer. I automate the 3AM page out of existence.">
+  <img src="assets/hero.webp" width="100%" alt="Krish Aryan, Site Reliability Engineer and AI Engineer. I automate the 3AM page out of existence.">
 </picture>
 
 <p align="center">
-  <img src="assets/panels/boot.svg" width="100%" alt="Terminal boot sequence. whoami: krish aryan · ai engineer × sre. uptime: on call for 215+ services. cat ~/motto: I automate the 3AM page out of existence. pagerduty --tonight: 0 humans paged. agent on it.">
+  <img src="assets/panels/boot.svg" width="100%" alt="Terminal boot sequence. whoami: krish aryan · sre × ai engineer. uptime: on call for 215+ services. cat ~/motto: I automate the 3AM page out of existence. pagerduty --tonight: 0 humans paged. agent on it.">
 </p>
 
 I build AI agents that investigate production incidents on their own, and I keep the 215+ services underneath them reliable. Not demos. Not POCs. Running in production.
@@ -18,7 +18,10 @@ I also design and build websites for people who want theirs to say something. Tw
   <a href="#websites-with-a-point-of-view"><img src="assets/panels/lane-builder.svg" width="400" alt="Lane two: Hire the builder. Web design and development. Jumps to the websites section."></a>
 </p>
 
-<img src="assets/dividers/divider.svg" width="100%" alt="">
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/dividers/divider-still.png">
+  <img src="assets/dividers/divider.gif" width="100%" alt="">
+</picture>
 
 ## Impact
 
@@ -78,6 +81,11 @@ H3  Leave the 3AM page to a human    0.01
 
 </details>
 
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/dividers/divider-still.png">
+  <img src="assets/dividers/divider.gif" width="100%" alt="">
+</picture>
+
 ## Systems shipped
 
 The headline work runs in production at my employer, so the code is private. These cards say what each system does, and the case studies are on [the portfolio](https://krisharyan.vercel.app/work).
@@ -85,7 +93,7 @@ The headline work runs in production at my employer, so the code is private. The
 <p align="center">
   <a href="https://krisharyan.vercel.app/work"><img src="assets/panels/system-tracelens.svg" width="400" alt="TraceLens, production and private: Investigates incidents across logs, metrics and alerts, then returns ranked, confidence-scored hypotheses with evidence, a Jira ticket and a Slack summary."></a>
   <a href="https://krisharyan.vercel.app/work"><img src="assets/panels/system-logagent.svg" width="400" alt="LogAgent, production and private: A ReAct agent that reads 200k–30M log lines per service per day with read-only bash. No ingestion pipeline, no vector database, no grep one-liners to regret later."></a>
-  <a href="https://krisharyan.vercel.app/work"><img src="assets/panels/system-alertflow.svg" width="400" alt="AlertFlow, production and private: Collapses alert storms into one triage queue. 47 alerts about the same thing aren't 47 problems. It's one problem and a terrible Tuesday."></a>
+  <a href="https://krisharyan.vercel.app/work"><img src="assets/panels/system-alertflow.svg" width="400" alt="AlertFlow, production and private: Collapses alert storms into one triage queue. Started on 150+ services, now covers 215+. 47 alerts about the same thing are one problem and a terrible Tuesday."></a>
   <a href="https://krisharyan.vercel.app/work"><img src="assets/panels/system-exception-clustering.svg" width="400" alt="Exception Clustering, production and private: Groups, de-duplicates and ranks exceptions across 215+ services. Then the paid subscription got cancelled. That felt good."></a>
 </p>
 
@@ -125,7 +133,10 @@ Bold entries are the daily drivers.
 
 </details>
 
-<img src="assets/dividers/divider.svg" width="100%" alt="">
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/dividers/divider-still.png">
+  <img src="assets/dividers/divider.gif" width="100%" alt="">
+</picture>
 
 ## Websites with a point of view
 
@@ -188,15 +199,31 @@ Also completed: Generative AI with Diffusion Models (AWS, Sep 2025).
 
 </details>
 
-<img src="assets/dividers/divider.svg" width="100%" alt="">
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/dividers/divider-still.png">
+  <img src="assets/dividers/divider.gif" width="100%" alt="">
+</picture>
 
 ## Live telemetry
 
-Regenerated daily by a GitHub Action in this repo. No third-party cards, no counters, no tracking.
+Regenerated daily by a GitHub Action in this repo, from git history and the GitHub API. No third-party cards, no counters, no tracking.
+
+
+<img src="https://raw.githubusercontent.com/KrishAryan12/KrishAryan12/output/stats.svg" width="100%" alt="By the numbers: contributions in the last year, public commits and repos, code lines added and deleted, and code by language. Counted from git history; data files, lockfiles, notebooks and generated files are excluded.">
+
 
 <img src="https://raw.githubusercontent.com/KrishAryan12/KrishAryan12/output/activity.svg" width="100%" alt="Recent public activity on GitHub, regenerated daily.">
 
+
 <img src="https://raw.githubusercontent.com/KrishAryan12/KrishAryan12/output/scoreboard.svg" width="100%" alt="My portfolio, audited weekly by my own tool, Teardown.">
+
+
+
+
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/dividers/divider-still.png">
+  <img src="assets/dividers/divider.gif" width="100%" alt="">
+</picture>
 
 ## Uplink
 
@@ -210,7 +237,10 @@ Regenerated daily by a GitHub Action in this repo. No third-party cards, no coun
 
 I read every message. The bar is just: don't open with "hope this finds you well."
 
----
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/dividers/divider-still.png">
+  <img src="assets/dividers/divider.gif" width="100%" alt="">
+</picture>
 
 <p align="center">
   <b>End of line.</b><br>

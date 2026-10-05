@@ -1,6 +1,7 @@
 /**
- * Static information panels: the stack grid, credentials and earlier work, plus the divider.
- * Only the divider moves. Restraint rule: if an effect does not help, it is not here.
+ * Static information panels: the stack grid, credentials and earlier work. None of them move.
+ * Restraint rule: if an effect does not help, it is not here. (Section breaks are the 3D GIF
+ * rendered by tools/render3d/divider.ts.)
  */
 import { C } from '../tokens/tokens.ts';
 import { SvgDoc, r } from '../svg/doc.ts';
@@ -118,30 +119,4 @@ export function earlierWork(p: Profile): PanelOutput {
     y += 36 + lines.length * 32 + 40;
   });
   return { file: 'panels/earlier-work.svg', svg: doc.render(), budgetKB: 50, displayWidth: 800 };
-}
-
-/**
- * Section divider: one light trail sweeps across a slim grid; near the end an orange pulse
- * appears and is resolved (fades to cyan). 12 s loop.
- */
-export function divider(): PanelOutput {
-  const w = 800;
-  const h = 28;
-  const css = [
-    `.tr{stroke-dasharray:120 1000;animation:tr 12s linear infinite}`,
-    `@keyframes tr{0%{stroke-dashoffset:120}70%,100%{stroke-dashoffset:-880}}`,
-    `.inc{opacity:0;animation:inc 12s linear infinite}`,
-    `@keyframes inc{0%,58%{opacity:0}62%{opacity:1}70%{opacity:1}76%,100%{opacity:0}}`,
-    `.ok{opacity:0;animation:ok 12s linear infinite}`,
-    `@keyframes ok{0%,68%{opacity:0}74%{opacity:1}90%{opacity:.6}100%{opacity:0}}`,
-  ].join('');
-  const doc = new SvgDoc({ width: w, height: h, title: 'Divider', css, still: '.ok{opacity:.8}.tr{stroke-dashoffset:-880}', glows: ['cyan'] });
-  doc.add(`<rect width="${w}" height="${h}" rx="4" fill="${C.void}"/>`);
-  const ticks: string[] = [];
-  for (let x = 20; x < w; x += 40) ticks.push(`M${x} ${h / 2 - 3}V${h / 2 + 3}`);
-  doc.add(`<path d="M10 ${h / 2}H${w - 10}${ticks.join('')}" stroke="${C.cyan}" stroke-opacity=".18"/>`);
-  doc.add(`<path class="tr" d="M10 ${h / 2}H${w - 10}" stroke="${C.cyan}" stroke-width="2.5" filter="url(#gc)"/>`);
-  doc.add(`<circle class="inc" cx="${r(10 + 0.66 * (w - 20))}" cy="${h / 2}" r="5" fill="${C.orange}"/>`);
-  doc.add(`<circle class="ok" cx="${r(10 + 0.66 * (w - 20))}" cy="${h / 2}" r="5" fill="none" stroke="${C.cyan}" stroke-width="2"/>`);
-  return { file: 'dividers/divider.svg', svg: doc.render(), budgetKB: 15, displayWidth: 800 };
 }

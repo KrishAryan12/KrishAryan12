@@ -111,7 +111,7 @@ const displayWidthOf = (rel: string): number => {
 {
   const svgs = trackedFiles.filter((f) => f.startsWith('assets/') && f.endsWith('.svg'));
   if (existsSync(join(ROOT, '.dynamic'))) {
-    for (const f of ['activity.svg', 'scoreboard.svg', 'stamp.svg']) if (existsSync(join(ROOT, '.dynamic', f))) svgs.push(`.dynamic/${f}`);
+    for (const f of ['activity.svg', 'scoreboard.svg', 'stats.svg', 'stamp.svg']) if (existsSync(join(ROOT, '.dynamic', f))) svgs.push(`.dynamic/${f}`);
   }
   for (const f of svgs) {
     const svg = readFileSync(join(ROOT, f), 'utf8');
@@ -159,6 +159,10 @@ const displayWidthOf = (rel: string): number => {
     if (s > p.budgetKB) fail('size', f, `${s.toFixed(1)} KB over its ${p.budgetKB} KB budget`);
     if (f.includes('/dividers/') && s > 15) fail('size', f, 'divider over 15 KB');
     if (s > 120) fail('size', f, 'SVG over the 120 KB hard limit');
+  }
+  for (const [f, maxKB] of [['assets/dividers/divider.gif', 1024], ['assets/dividers/divider-still.png', 150], ['assets/hero-poster.png', 600]] as const) {
+    if (!existsSync(join(ROOT, f))) fail('size', f, 'missing');
+    else if (kb(f) > maxKB) fail('size', f, `${kb(f).toFixed(0)} KB over ${maxKB} KB`);
   }
   const hero = 'assets/hero.webp';
   if (!existsSync(join(ROOT, hero))) fail('size', hero, 'missing');

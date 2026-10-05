@@ -10,7 +10,7 @@ import type { PanelOutput } from './types.ts';
 import { boot, impact, lanes, timeline } from './intro.ts';
 import { investigation } from './investigation.ts';
 import { buttons, paperCards, systemCards, websiteCards } from './cards.ts';
-import { credentials, divider, earlierWork, stack } from './lists.ts';
+import { credentials, earlierWork, stack } from './lists.ts';
 
 export function buildAllPanels(): PanelOutput[] {
   const p = loadProfile();
@@ -28,7 +28,6 @@ export function buildAllPanels(): PanelOutput[] {
     earlierWork(p),
     credentials(p),
     ...buttons(),
-    divider(),
   ];
 }
 

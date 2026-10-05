@@ -45,12 +45,12 @@ export interface GridSceneOptions {
 const DEFAULT_COLORS = { void: '#04070D', cyan: '#66F6FF', cyanMid: '#18C8E0', orange: '#FF7A18', white: '#E8FAFF' };
 
 // ---------- small deterministic helpers ----------
-const clamp01 = (x: number) => Math.min(1, Math.max(0, x));
-const smooth = (a: number, b: number, x: number) => {
+export const clamp01 = (x: number) => Math.min(1, Math.max(0, x));
+export const smooth = (a: number, b: number, x: number) => {
   const t = clamp01((x - a) / (b - a));
   return t * t * (3 - 2 * t);
 };
-function mulberry32(seed: number) {
+export function mulberry32(seed: number) {
   return () => {
     seed |= 0;
     seed = (seed + 0x6d2b79f5) | 0;
@@ -61,7 +61,7 @@ function mulberry32(seed: number) {
 }
 
 /** A polyline path in the XZ plane with arc-length lookup. */
-class Path2 {
+export class Path2 {
   private seg: number[] = [0];
   readonly length: number;
   constructor(readonly pts: THREE.Vector2[]) {
@@ -88,7 +88,7 @@ class Path2 {
 }
 
 /** Vertical light wall that follows a path: the light-cycle trail. */
-class Trail {
+export class Trail {
   readonly mesh: THREE.Mesh;
   private geo = new THREE.BufferGeometry();
   private max = 400;
@@ -137,7 +137,7 @@ class Trail {
 }
 
 /** A generic light cycle: a low glowing wedge. Deliberately not a copy of any film prop. */
-function makeCycle(color: THREE.Color): THREE.Group {
+export function makeCycle(color: THREE.Color): THREE.Group {
   const g = new THREE.Group();
   const body = new THREE.Mesh(
     new THREE.BoxGeometry(0.9, 0.32, 0.28),

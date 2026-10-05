@@ -56,6 +56,29 @@ export async function encodeAll(o: EncodeOpts): Promise<Record<string, number>> 
   return sizes;
 }
 
+/**
+ * Section-break strip. GIF is the shipped format (the owner asked for a GIF, and a small dark strip
+ * compresses well as one); WebP is encoded alongside for the size comparison.
+ */
+export async function encodeDivider(o: EncodeOpts): Promise<Record<string, number>> {
+  const input = ['-framerate', String(o.fps), '-i', join(o.framesDir, 'f%04d.png')];
+  const scale = `scale=${o.width}:${o.height}:flags=lanczos`;
+  const out = (name: string) => join(o.outDir, name);
+  const sizes: Record<string, number> = {};
+  ffmpeg([...input, '-vf', `${scale},palettegen=max_colors=128:stats_mode=full`, out('divider-palette.png')]);
+  ffmpeg([...input, '-i', out('divider-palette.png'), '-lavfi', `${scale}[x];[x][1:v]paletteuse=dither=sierra2_4a:diff_mode=rectangle`, '-loop', '0', out('divider.gif')]);
+  sizes['divider.gif'] = mb(out('divider.gif'));
+  ffmpeg([...input, '-vf', scale, '-c:v', 'libwebp_anim', '-lossless', '0', '-q:v', '85', '-loop', '0', out('divider.webp')]);
+  sizes['divider.webp'] = mb(out('divider.webp'));
+  ffmpeg(['-i', join(o.framesDir, 'poster.png'), '-vf', scale, '-compression_level', '9', out('divider-still.png')]);
+  sizes['divider-still.png'] = mb(out('divider-still.png'));
+  for (const [k, v] of Object.entries(sizes)) console.log(`${k.padEnd(18)} ${(v * 1024).toFixed(0)} KB`);
+  copyFileSync(out('divider.gif'), join(ASSETS, 'dividers', 'divider.gif'));
+  copyFileSync(out('divider-still.png'), join(ASSETS, 'dividers', 'divider-still.png'));
+  console.log('shipped assets/dividers/divider.gif and divider-still.png');
+  return sizes;
+}
+
 /** Copy the chosen candidate and the poster into assets/. */
 export function ship(outDir: string, chosen: 'hero.gif' | 'hero.webp'): void {
   copyFileSync(join(outDir, chosen), join(ASSETS, chosen));

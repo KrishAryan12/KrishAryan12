@@ -19,6 +19,7 @@ import { C } from '../tokens/tokens.ts';
 import { SvgDoc } from '../svg/doc.ts';
 import { chrome } from '../svg/chrome.ts';
 import type { DynamicState } from '../readme/build.ts';
+import { computeStats, statsPanel, type RepoRef } from './stats.ts';
 
 const W = 800;
 const UA = { 'user-agent': 'KrishAryan12-profile-generator', accept: 'application/vnd.github+json' };
@@ -229,6 +230,16 @@ export function scoreboardPanel(s: Scores, at: string): string {
   return doc.render();
 }
 
+// ---------------------------------------------------------------- repos (for stats)
+
+/** Owned, public, non-fork repos except the profile repo itself. */
+export async function listRepos(p: Profile): Promise<RepoRef[]> {
+  const res = await fetch(`https://api.github.com/users/${p.githubUser}/repos?type=owner&per_page=100`, { headers: ghHeaders() });
+  if (!res.ok) throw new Error(`repos API ${res.status}`);
+  const repos = (await res.json()) as Array<{ name: string; fork: boolean; private: boolean; clone_url: string }>;
+  return repos.filter((r) => !r.fork && !r.private && r.name !== p.githubUser).map((r) => ({ name: r.name, cloneUrl: r.clone_url }));
+}
+
 // ---------------------------------------------------------------- stamp
 
 export function stampSvg(date: string): string {
@@ -280,12 +291,29 @@ async function main(): Promise<void> {
     scoreboard = true;
   }
 
+  let stats = !!prev.stats && existsSync(join(out, 'stats.svg'));
+  if (p.dynamic.stats) {
+    try {
+      const reposArg = args.indexOf('--repos');
+      const repos: RepoRef[] = reposArg >= 0
+        ? args[reposArg + 1]!.split(',').map((name) => ({ name, cloneUrl: `https://github.com/${p.githubUser}/${name}.git` }))
+        : await listRepos(p);
+      const st = computeStats(repos);
+      writeFileSync(join(out, 'stats.svg'), statsPanel(st, contributions, today));
+      stats = true;
+      console.log(`stats: ${st.repos} repos, ${st.commits} commits, +${st.additions}/-${st.deletions}, ${st.languages.slice(0, 4).map((l) => `${l.name} ${l.pct.toFixed(0)}%`).join(', ')}, peak ${st.peakHourIst}:00 IST, 3AM ${st.threeAmCommits}`);
+    } catch (e) {
+      console.warn(`stats skipped, keeping last good panel: ${(e as Error).message}`);
+    }
+  }
+
   writeFileSync(join(out, 'stamp.svg'), stampSvg(today));
   const state: DynamicState = {
     generatedAt: new Date().toISOString(),
     contributionsLastYear: contributions ?? prev.contributionsLastYear ?? null,
     contribGraph: (contributions ?? 0) >= p.dynamic.contribThreshold,
     scoreboard,
+    stats,
     lastScan,
   };
   writeFileSync(prevStatePath, JSON.stringify(state, null, 2) + '\n');

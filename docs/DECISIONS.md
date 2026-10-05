@@ -10,10 +10,11 @@ Each entry: decision, reason, alternative considered. Verified facts carry the d
 | P1 and P4 check-ins batched into the final review | The owner asked for the brief to be implemented in one go ("finish it up"); the P9 gate (no merge without approval) is kept | Stop after DESIGN.md and after the hero |
 | Commits use the GitHub noreply address | The machine's global git identity is the owner's personal email, which the privacy rules forbid in history | Global identity (would leak the address) |
 | `content/profile.json` is curated by hand from the private inputs and committed | `inputs/` is gitignored, so CI cannot regenerate from it; one committed file is the source of truth for CI and the Action | A sync script reading `inputs/` (works only on the owner's machine) |
-| Canonical title: "AI Engineer × Site Reliability Engineer" | It is `owner.json -> titleLine`, the owner's own choice; reported in the checklist | Resume or portfolio wording |
+| Canonical title: "SRE × AI Engineer" | Chosen by the owner on 2026-10-06 (matches the portfolio). Hero re-rendered with the subtitle "SITE RELIABILITY ENGINEER × AI ENGINEER" | `owner.json -> titleLine` (used by the first build) |
 | Role history from LinkedIn (Cloud Intern → Associate SRE → Software Engineer - SRE) | The brief says so; it is the public, checkable record | Resume's single title |
-| AlertFlow service count, Nebulixus, freelance services, availability, rates: omitted | Unconfirmed or conflicting (brief rule 3) | Publish one of the conflicting numbers |
-| Stockroom shown as a live system | The brief asks for it and owner.json marks it `mayName: true`; showcase permission is the first checklist item to confirm before merge | Hide until confirmed |
+| AlertFlow: "started on 150+ services, now 215+" | Owner confirmed on 2026-10-06, resolving the 185+/150+ conflict | Omit the number |
+| Nebulixus, freelance client projects and services, availability, rates: omitted | Owner's decision on 2026-10-06 (Nebulixus dropped; freelance on hold; Castle & Nest unnamed) | Show them |
+| Stockroom shown as a live system | Owner confirmed on 2026-10-06: it was a take-home assignment and is fine to show | Hide it |
 | Border-surveillance repo not linked; facial-recognition repo linked | The former has a committed API token and logged descriptions of a person; the latter's CSV holds only the owner's own name | Link both |
 
 ## Design
@@ -29,6 +30,43 @@ Each entry: decision, reason, alternative considered. Verified facts carry the d
 | Stack: 3×2 groups, 5 items each | A 6-across grid could not fit 24-unit labels; also keeps it from becoming a logo dump | Single grid |
 | Dividers use `alt=""` | Purely decorative; announcing "divider" four times helps nobody. The a11y lint allows empty alt only for dividers | Non-empty alt everywhere |
 | Overflowing card copy fails the build | Found on real GitHub: the TraceLens card was cut mid-sentence. Now copy must be edited, never truncated | Truncate silently |
+
+## Section breaks (2026-10-06)
+
+The owner asked for section breaks that are "a proper gif that looks like a super cool animation"
+instead of standard dividers. The 800×28 SVG divider was replaced by a 3D strip rendered with the
+same Three.js pipeline as the hero (`tools/render3d/divider.ts`, `pnpm render:hero --divider`):
+a cyan light cycle passes an orange incident node, which resolves to cyan with a ring pulse; the
+trail dissolves and a new incident fades in. 4 s seamless loop, 1200×96, 20 fps.
+
+| Candidate | Size | Verdict |
+|---|---|---|
+| **GIF, 128 colours, sierra2_4a** | **859 KB** | **Shipped** (the owner asked for a GIF; universally supported) |
+| GIF, 64 colours | 736 KB | Marginal saving |
+| GIF, 32 colours | 604 KB | Rejected: orange dither speckles appear around the cyan ring, which breaks the colour rule |
+| Animated WebP q85 | 184 KB | Smaller; the fallback if page weight ever matters more than the literal ask |
+| Still PNG (reduced motion) | 59 KB | `<picture>` source for `prefers-reduced-motion` |
+
+The same GIF is used for all six breaks, so it downloads once. This supersedes the brief's 15 KB
+divider budget (an owner request); the size lint caps the divider GIF at 1 MB and the total
+first-load weight stays under 5 MB (4.11 MB measured). Bloom was turned down for this strip: at
+192 px of render height the bloom mip chain produced a visible rectangular haze.
+
+## Stats panel (2026-10-06)
+
+The owner asked for "a stats or numbers kind of a section" (commits, repos, lines added and
+deleted, language distribution). It is generated here, not borrowed from a readme-stats service.
+
+| Decision | Reason | Alternative |
+|---|---|---|
+| Count from `git log --numstat` over bare clones of every owned, public, non-fork repo | Exact per-file line counts; git clones are not subject to the 60-requests-per-hour API limit | GitHub's `/stats/contributors` (counts data files, returns 202 while computing) |
+| Count code only: data files, lockfiles, notebooks, generated files, binaries, logs and docs excluded | Uploaded CSVs and notebook JSON outputs would dwarf the code and inflate the numbers; the honest figure is code written | Count every line |
+| Language mix by lines written per file extension | Consistent with the line counts; GitHub's byte-based language API would make the BTC notebook look like the main language | `/languages` bytes |
+| Bot commits excluded; every human commit counted | The owner's older commits use a personal address that must never appear in this repo, so the filter matches bots instead of the owner | Filter by the owner's email |
+| Contributions figure from the GraphQL contribution calendar | It includes private contributions once the owner enables them, which they asked for | Public events count |
+| Fun line: peak commit hour (IST) and "3AM commits" | On-brand and true; computed from commit timestamps converted to IST | None |
+| Measured 2026-10-06 | 8 public repos, 38 commits, +21.8k / −587 code lines; TypeScript 64%, Python 11%, JavaScript 10%, CSS 8%; peak hour 11:00 IST; 1 commit at 3AM | |
+| No Markdown text equivalent for the stats panel | Its numbers change daily; putting them in the README would mean a daily commit to `main`. The SVG has a `<desc>`, the alt text says what it shows, and every number comes from public data | Daily README commits |
 
 ## Hero format shoot-out (2026-10-05)
 

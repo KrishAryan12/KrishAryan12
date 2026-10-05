@@ -14,7 +14,7 @@ Sources:
 
 | Id | Claim as published | Source | Notes |
 |---|---|---|---|
-| C01 | AI Engineer × Site Reliability Engineer (title) | R, P, L | Canonical form chosen from `owner.json -> titleLine`; the three sources word it differently (see OWNER_CHECKLIST). |
+| C01 | SRE × AI Engineer (title) | P, owner | The portfolio's wording, confirmed by the owner on 2026-10-06 as the canonical form. |
 | C02 | "I automate the 3AM page out of existence." | P | Portfolio hero line, owner's tagline. 3AM is a time, not a metric. |
 | C03 | 215+ services, primary on-call owner | R, P | Resume: "Primary on-call owner for 215+ AWS microservices". Portfolio: "215 services". |
 | C04 | 480× faster incident triage, ~2 h → ~15 s, live on AWS EKS | R, P | Resume summary and TraceLens project; portfolio `/work`. |
@@ -26,9 +26,9 @@ Sources:
 | C10 | Cloud Intern from Feb 2025; built AlertFlow | L, P | LinkedIn role history; portfolio handbook timeline. Resume shows a single title instead (conflict listed in OWNER_CHECKLIST). |
 | C11 | Associate SRE from Jul 2025; built TraceLens | L, P | LinkedIn; handbook ("Got converted to Associate SRE. Built TraceLens."). |
 | C12 | Software Engineer - SRE from Feb 2026; AI-tooling lead for the SRE org | L, P | LinkedIn ("Resident AI-tooling lead for the SRE org"); handbook. Intern → engineer = 12 months, computed at build time from the start months (Feb 2025 → Feb 2026). Tenure ("1 yr 9 mos") is computed at build time, never hard-coded. |
-| C13 | Nebulixus research internship (Jun–Jul 2024) | L | **Not published.** LinkedIn only; awaiting owner confirmation. |
+| C13 | Nebulixus research internship | L | **Not published.** The owner chose to leave it out (2026-10-06). |
 | C14 | LogAgent: ReAct agent over 200k–30M log lines per service per day with read-only bash; no ingestion pipeline or vector database; 2 tools | R, P | Resume LogAgent project (two-tool design, run_bash and get_session_context); portfolio `/work`. |
-| C15 | AlertFlow collapses alert storms into one triage queue; "47 alerts … one problem and a terrible Tuesday" | R, L, P | Resume, LinkedIn summary, portfolio `/work`. **Service count withheld**: resume and portfolio say 185+, LinkedIn and handbook say 150+. |
+| C15 | AlertFlow collapses alert storms into one triage queue; started on 150+ services, now covers 215+; "47 alerts … one problem and a terrible Tuesday" | R, L, P, owner | Resume, LinkedIn summary, portfolio `/work`. Scope confirmed by the owner on 2026-10-06 (150+ at launch, 215+ now), which resolves the 185+/150+ conflict between sources. |
 | C16 | Exception Clustering: in-house Sentry replacement ranking exceptions across 215+ services; paid subscription cancelled | R, P | Resume; portfolio `/work` ("Then we cancelled our Sentry subscription.") and handbook. |
 | C20 | Teardown: real browser, 65 rules plus axe-core, fix list an AI coding agent can execute; free, no account | T, G | Teardown README ("65 deterministic rules plus axe-core", "Free, private, no account"). |
 | C21 | Stockroom: FastAPI, React, PostgreSQL; transactional orders with row locking, idempotent order creation, audit logs, request-ID JSON logging, PostgreSQL-backed tests; live demo; Docker image | G | Stockroom README, verified in code: `with_for_update()` in `backend/app/services/orders.py`, `Idempotency-Key` header and `idempotency_records` table, `middleware/request_id.py`, `core/logging.py`, `services/audit.py`, `tests/test_postgres_integration.py`. Live URLs checked 2026-10-05. Showcase permission pending (OWNER_CHECKLIST). |
@@ -45,7 +45,7 @@ Sources:
 
 Each of these must trace to a row above: 480×, ~2 h, ~15 s, 215+, 3 Sev-1/P0, 40+, 12+, 1,094,
 12 months (C12, computed), 1 yr 9 mos (C12, computed; the value changes monthly), 9.24/10 (C35),
-65 rules (C20), 95+ (C22), 200k–30M (C14), 2 tools (C14), 47 alerts (C15), 0.97 / 0.02 / 0.01
+65 rules (C20), 95+ (C22), 200k–30M (C14), 2 tools (C14), 47 alerts, 150+ (C15), 0.97 / 0.02 / 0.01
 (hypothesis confidences in the investigation parody: a joke, not a metric), 16 and 19 (Next.js 16,
 React 19, C22), 101 (Claude Code 101, a course title), 2024 (paper years), 4o (GPT-4o, a model name).
 

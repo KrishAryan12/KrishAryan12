@@ -2,8 +2,8 @@
   "$comment": "Single source of truth for the README and every panel. Each factual field carries a claim id that maps to docs/CLAIMS.md. Curated from inputs/owner.json, inputs/resume.md, inputs/linkedin.md and the research in docs/RESEARCH.md.",
   "name": "Krish Aryan",
   "githubUser": "KrishAryan12",
-  "title": "AI Engineer × Site Reliability Engineer",
-  "titlePlain": "AI Engineer and Site Reliability Engineer",
+  "title": "SRE × AI Engineer",
+  "titlePlain": "Site Reliability Engineer and AI Engineer",
   "tagline": "I automate the 3AM page out of existence.",
   "location": "Bengaluru, India",
   "timezone": "IST",
@@ -26,7 +26,7 @@
   "boot": [
     {
       "cmd": "whoami",
-      "out": "krish aryan · ai engineer × sre",
+      "out": "krish aryan · sre × ai engineer",
       "claim": "C01"
     },
     {
@@ -108,16 +108,6 @@
       "built": "AI-tooling lead, SRE org",
       "show": true,
       "claim": "C12"
-    },
-    {
-      "employer": "Nebulixus",
-      "title": "Research Associate Intern",
-      "start": "2024-06",
-      "end": "2024-07",
-      "built": "ML for economic modelling",
-      "show": false,
-      "claim": "C13",
-      "pending": "Owner to confirm (LinkedIn only)"
     }
   ],
   "investigation": {
@@ -211,8 +201,8 @@
       {
         "name": "AlertFlow",
         "kicker": "Real-time alert correlation",
-        "body": "Collapses alert storms into one triage queue. 47 alerts about the same thing aren't 47 problems. It's one problem and a terrible Tuesday.",
-        "stat": "storm → queue",
+        "body": "Collapses alert storms into one triage queue. Started on 150+ services, now covers 215+. 47 alerts about the same thing are one problem and a terrible Tuesday.",
+        "stat": "150+ → 215+ services",
         "claim": "C15"
       },
       {
@@ -597,6 +587,7 @@
     "outputBranch": "output",
     "contribGraph": "auto",
     "contribThreshold": 150,
-    "scoreboard": true
+    "scoreboard": true,
+    "stats": true
   }
 }

@@ -19,7 +19,7 @@
   <a href="#websites-with-a-point-of-view"><img src="assets/panels/lane-builder.svg" width="400" alt="Lane two: Hire the builder. Web design and development. Jumps to the websites section."></a>
 </p>
 
-<img src="assets/dividers/divider.svg" width="100%" alt="">
+{{divider}}
 
 ## Impact
 
@@ -50,6 +50,8 @@ What TraceLens does to an incident, done to me instead. Synthetic tool names, re
 ```
 
 </details>
+
+{{divider}}
 
 ## Systems shipped
 
@@ -87,7 +89,7 @@ Two public systems you can open right now:
 
 </details>
 
-<img src="assets/dividers/divider.svg" width="100%" alt="">
+{{divider}}
 
 ## Websites with a point of view
 
@@ -129,11 +131,15 @@ Two peer-reviewed papers, published before I graduated ({{education.degree}}, GP
 
 </details>
 
-<img src="assets/dividers/divider.svg" width="100%" alt="">
+{{divider}}
 
 ## Live telemetry
 
-Regenerated daily by a GitHub Action in this repo. No third-party cards, no counters, no tracking.
+Regenerated daily by a GitHub Action in this repo, from git history and the GitHub API. No third-party cards, no counters, no tracking.
+
+{{#if stats}}
+<img src="{{dynamicBase}}/stats.svg" width="100%" alt="By the numbers: contributions in the last year, public commits and repos, code lines added and deleted, and code by language. Counted from git history; data files, lockfiles, notebooks and generated files are excluded.">
+{{/if}}
 
 <img src="{{dynamicBase}}/activity.svg" width="100%" alt="Recent public activity on GitHub, regenerated daily.">
 
@@ -144,6 +150,8 @@ Regenerated daily by a GitHub Action in this repo. No third-party cards, no coun
 {{#if contribGraph}}
 <img src="{{dynamicBase}}/contrib-3d.svg" width="100%" alt="Contribution graph in 3D for the last year.">
 {{/if}}
+
+{{divider}}
 
 ## Uplink
 
@@ -157,7 +165,7 @@ Regenerated daily by a GitHub Action in this repo. No third-party cards, no coun
 
 I read every message. The bar is just: don't open with "hope this finds you well."
 
----
+{{divider}}
 
 <p align="center">
   <b>End of line.</b><br>

@@ -17,7 +17,7 @@ import { compactPath, loadFont } from '../src/svg/text.ts';
 import { ROOT } from '../src/lib/paths.ts';
 import { loadProfile } from '../src/lib/content.ts';
 import { C, tokens } from '../src/tokens/tokens.ts';
-import { encodeAll } from './encode.ts';
+import { encodeAll, encodeDivider } from './encode.ts';
 
 const HERE = join(ROOT, 'tools', 'render3d');
 const OUT = join(HERE, 'out');
@@ -33,6 +33,17 @@ export const HERO = {
   posterT: 6.2,
   /** Loop phase of the first frame. */
   startT: 5.6,
+};
+
+/** Section-break strip: 1200×96 output, rendered at 2×, 4 s loop. */
+export const DIVIDER = {
+  width: 1200,
+  height: 96,
+  scale: 2,
+  fps: 20,
+  loop: 4,
+  /** Reduced-motion still: the node just resolved, trail at full length. */
+  stillT: 2.2,
 };
 
 /** Advance in 100-unit em; a lone space reports NaN in some opentype.js builds. */
@@ -54,7 +65,7 @@ function titlePaths(): { d: string[]; width: number; subD: string[]; subWidth: n
     if (ch !== ' ') d.push(compactPath(bold.getPath(ch, x, 0, 100)));
     x += advance(bold, ch) + tracking;
   }
-  const sub = 'AI ENGINEER  ×  SITE RELIABILITY ENGINEER';
+  const sub = 'SITE RELIABILITY ENGINEER  ×  AI ENGINEER';
   let sx = 0;
   const subD: string[] = [];
   for (const ch of sub) {
@@ -64,9 +75,9 @@ function titlePaths(): { d: string[]; width: number; subD: string[]; subWidth: n
   return { d, width: x - tracking, subD, subWidth: sx - 14 };
 }
 
-async function bundle(): Promise<string> {
+async function bundle(entry: string): Promise<string> {
   const res = await build({
-    entryPoints: [join(HERE, 'scene.ts')],
+    entryPoints: [join(HERE, entry)],
     bundle: true,
     format: 'iife',
     write: false,
@@ -76,23 +87,54 @@ async function bundle(): Promise<string> {
   return res.outputFiles[0]!.text;
 }
 
-async function renderFrames(times: Array<{ t: number; name: string }>): Promise<void> {
-  mkdirSync(FRAMES, { recursive: true });
-  const js = await bundle();
-  const opts = {
-    width: HERO.width * HERO.scale,
-    height: HERO.height * HERO.scale,
-    loop: HERO.loop,
-    title: titlePaths(),
-    colors: { void: C.void, cyan: C.cyan, cyanMid: C.cyanMid, orange: C.orange, white: C.white },
+interface Target {
+  entry: string;
+  /** Window global the bundle reads its options from. */
+  global: '__HERO__' | '__DIVIDER__';
+  opts: { width: number; height: number } & Record<string, unknown>;
+  framesDir: string;
+}
+
+function heroTarget(): Target {
+  return {
+    entry: 'scene.ts',
+    global: '__HERO__',
+    framesDir: FRAMES,
+    opts: {
+      width: HERO.width * HERO.scale,
+      height: HERO.height * HERO.scale,
+      loop: HERO.loop,
+      title: titlePaths(),
+      colors: { void: C.void, cyan: C.cyan, cyanMid: C.cyanMid, orange: C.orange, white: C.white },
+    },
   };
-  const html = `<!doctype html><html><body style="margin:0;background:#000"><canvas id="c" width="${opts.width}" height="${opts.height}"></canvas>
-<script>window.__HERO__=${JSON.stringify(opts)};</script><script>${js}</script></body></html>`;
-  const page_ = join(OUT, 'hero.html');
+}
+
+function dividerTarget(): Target {
+  return {
+    entry: 'divider.ts',
+    global: '__DIVIDER__',
+    framesDir: join(OUT, 'divider-frames'),
+    opts: {
+      width: DIVIDER.width * DIVIDER.scale,
+      height: DIVIDER.height * DIVIDER.scale,
+      loop: DIVIDER.loop,
+      colors: { void: C.void, cyan: C.cyan, cyanMid: C.cyanMid, orange: C.orange },
+    },
+  };
+}
+
+async function renderFrames(target: Target, times: Array<{ t: number; name: string }>): Promise<void> {
+  mkdirSync(target.framesDir, { recursive: true });
+  const js = await bundle(target.entry);
+  const { width, height } = target.opts;
+  const html = `<!doctype html><html><body style="margin:0;background:#000"><canvas id="c" width="${width}" height="${height}"></canvas>
+<script>window.${target.global}=${JSON.stringify(target.opts)};</script><script>${js}</script></body></html>`;
+  const page_ = join(OUT, `${target.global.replace(/_/g, '').toLowerCase()}.html`);
   writeFileSync(page_, html);
   const browser = await chromium.launch({ args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
   try {
-    const page = await browser.newPage({ viewport: { width: opts.width, height: opts.height } });
+    const page = await browser.newPage({ viewport: { width, height } });
     page.on('pageerror', (e) => console.error('page error:', e.message));
     await page.goto(`file:///${page_.replace(/\\/g, '/')}`);
     await page.waitForFunction(() => window.__READY__ === true, null, { timeout: 60_000 });
@@ -102,7 +144,7 @@ async function renderFrames(times: Array<{ t: number; name: string }>): Promise<
         window.renderFrame!(t);
         return (document.getElementById('c') as HTMLCanvasElement).toDataURL('image/png');
       }, f.t);
-      writeFileSync(join(FRAMES, `${f.name}.png`), Buffer.from(dataUrl.split(',')[1]!, 'base64'));
+      writeFileSync(join(target.framesDir, `${f.name}.png`), Buffer.from(dataUrl.split(',')[1]!, 'base64'));
       if (i % 20 === 0) console.log(`frame ${i + 1}/${times.length} (${((Date.now() - started) / 1000).toFixed(0)} s)`);
     }
   } finally {
@@ -110,12 +152,32 @@ async function renderFrames(times: Array<{ t: number; name: string }>): Promise<
   }
 }
 
+const frameName = (i: number) => `f${String(i).padStart(4, '0')}`;
+
 async function main(): Promise<void> {
   const args = new Set(process.argv.slice(2));
   mkdirSync(OUT, { recursive: true });
+
+  if (args.has('--divider')) {
+    const target = dividerTarget();
+    if (args.has('--stills')) {
+      await renderFrames(target, [0.4, 1.4, 1.9, 2.2, 3.0, 3.8].map((t) => ({ t, name: `still-${t.toFixed(1)}` })));
+      console.log(`stills in ${target.framesDir}`);
+      return;
+    }
+    if (existsSync(target.framesDir)) rmSync(target.framesDir, { recursive: true });
+    const n = DIVIDER.fps * DIVIDER.loop;
+    const times = Array.from({ length: n }, (_, i) => ({ t: i / DIVIDER.fps, name: frameName(i) }));
+    times.push({ t: DIVIDER.stillT, name: 'poster' });
+    await renderFrames(target, times);
+    await encodeDivider({ framesDir: target.framesDir, outDir: OUT, fps: DIVIDER.fps, width: DIVIDER.width, height: DIVIDER.height });
+    return;
+  }
+
+  const target = heroTarget();
   if (args.has('--stills')) {
     const ts = [0.5, 1.8, 2.7, 3.2, 3.8, 4.6, HERO.posterT, 7.6];
-    await renderFrames(ts.map((t) => ({ t, name: `still-${t.toFixed(1)}` })));
+    await renderFrames(target, ts.map((t) => ({ t, name: `still-${t.toFixed(1)}` })));
     console.log(`stills in ${FRAMES}`);
     return;
   }
@@ -123,9 +185,9 @@ async function main(): Promise<void> {
     if (existsSync(FRAMES)) rmSync(FRAMES, { recursive: true });
     const n = HERO.fps * HERO.loop;
     // Start the loop on the lit title, so the first frame (what a slow connection shows first) is the name.
-    const times = Array.from({ length: n }, (_, i) => ({ t: (i / HERO.fps + HERO.startT) % HERO.loop, name: `f${String(i).padStart(4, '0')}` }));
+    const times = Array.from({ length: n }, (_, i) => ({ t: (i / HERO.fps + HERO.startT) % HERO.loop, name: frameName(i) }));
     times.push({ t: HERO.posterT, name: 'poster' });
-    await renderFrames(times);
+    await renderFrames(target, times);
   }
   const frames = readdirSync(FRAMES).filter((f) => /^f\d{4}\.png$/.test(f)).length;
   console.log(`${frames} frames; encoding`);
