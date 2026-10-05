@@ -32,7 +32,7 @@ export function buildAllPanels(): PanelOutput[] {
   ];
 }
 
-if (import.meta.url === `file://${process.argv[1]?.replace(/\\/g, '/')}` || process.argv[1]?.endsWith('build.ts')) {
+if (process.argv[1]?.replace(/\\/g, '/').endsWith('panels/build.ts')) {
   const panels = buildAllPanels();
   for (const panel of panels) {
     const out = join(ASSETS, panel.file);

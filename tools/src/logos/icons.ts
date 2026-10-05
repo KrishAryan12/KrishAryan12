@@ -41,6 +41,6 @@ export function chipAt(doc: SvgDoc, text: string, cx: number, cy: number, size: 
   const h = size * 0.82;
   return [
     `<rect x="${r(cx - w / 2)}" y="${r(cy - h / 2)}" width="${r(w)}" height="${r(h)}" rx="${r(size * 0.16)}" fill="none" stroke="${color}" stroke-width="1.6"/>`,
-    doc.text(text, cx, cy + fontSize * 0.36, { font: 'displayBold', size: fontSize, fill: color, anchor: 'middle' }),
+    doc.text(text, cx, cy + fontSize * 0.36, { font: 'displayBold', size: fontSize, fill: color, anchor: 'middle', cls: 'deco' }),
   ].join('');
 }

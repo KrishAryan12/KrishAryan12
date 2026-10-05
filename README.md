@@ -6,7 +6,7 @@
 </picture>
 
 <p align="center">
-  <img src="assets/panels/boot.svg" width="100%" alt="Terminal boot sequence. whoami: krish aryan · ai engineer × sre. uptime: on call for 215+ services. cat ~/motto: I automate the 3AM page out of existence.. pagerduty --tonight: 0 humans paged. agent on it.">
+  <img src="assets/panels/boot.svg" width="100%" alt="Terminal boot sequence. whoami: krish aryan · ai engineer × sre. uptime: on call for 215+ services. cat ~/motto: I automate the 3AM page out of existence. pagerduty --tonight: 0 humans paged. agent on it.">
 </p>
 
 I build AI agents that investigate production incidents on their own, and I keep the 215+ services underneath them reliable. Not demos. Not POCs. Running in production.
@@ -195,6 +195,8 @@ Also completed: Generative AI with Diffusion Models (AWS, Sep 2025).
 Regenerated daily by a GitHub Action in this repo. No third-party cards, no counters, no tracking.
 
 <img src="https://raw.githubusercontent.com/KrishAryan12/KrishAryan12/output/activity.svg" width="100%" alt="Recent public activity on GitHub, regenerated daily.">
+
+<img src="https://raw.githubusercontent.com/KrishAryan12/KrishAryan12/output/scoreboard.svg" width="100%" alt="My portfolio, audited weekly by my own tool, Teardown.">
 
 ## Uplink
 

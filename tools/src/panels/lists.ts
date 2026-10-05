@@ -50,9 +50,9 @@ export function stack(p: Profile): PanelOutput {
         const iconCol = accent ? C.cyan : C.cyanMid;
         doc.add(it.icon ? iconAt(it.icon, tx, cy - 5, 17, iconCol) : chipAt(doc, it.chip ?? it.name.slice(0, 3), tx, cy - 5, 20, iconCol));
         const labelSize = 24;
-        const maxW = colW - 84;
+        const maxW = colW - 76;
         const fit = Math.min(labelSize, (maxW / doc.atlas.measure(it.name, 'display', labelSize)) * labelSize);
-        doc.add(doc.text(it.name, x + 72, cy + 4, { font: accent ? 'displayBold' : 'display', size: +fit.toFixed(1), fill: accent ? C.white : C.dim }));
+        doc.add(doc.text(it.name, x + 66, cy + 4, { font: accent ? 'displayBold' : 'display', size: +fit.toFixed(1), fill: accent ? C.white : C.dim }));
       });
     }
     y += blockH[row]!;

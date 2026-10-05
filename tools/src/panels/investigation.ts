@@ -122,7 +122,7 @@ export function investigation(p: Profile, d: Derived): PanelOutput {
     const tw = doc.atlas.measure(text, 'mono', size, 1);
     const pw = tw + 48;
     const px = W - padX - pw;
-    return `<g class="${cls}"><rect x="${r(px)}" y="16" width="${r(pw)}" height="36" rx="18" fill="${col}" fill-opacity=".1" stroke="${col}"/>${doc.text('●', px + 12, 43, { font: 'display', size: 20, fill: col })}${doc.text(text, px + 36, 42, { font: 'mono', size, fill: col, tracking: 1 })}</g>`;
+    return `<g class="${cls}"><rect x="${r(px)}" y="16" width="${r(pw)}" height="36" rx="18" fill="${col}" fill-opacity=".1" stroke="${col}"/>${doc.text('●', px + 12, 43, { font: 'display', size: 20, fill: col, cls: 'deco' })}${doc.text(text, px + 36, 42, { font: 'mono', size, fill: col, tracking: 1 })}</g>`;
   };
   doc.add(chip('st-a', 'INVESTIGATING', C.orange));
   doc.add(chip('st-b', 'RESOLVED', C.cyan));

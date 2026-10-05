@@ -60,6 +60,10 @@ export async function fetchActivity(p: Profile, limit = 5): Promise<Activity[]> 
   const self = `${p.githubUser}/${p.githubUser}`;
   const out: Activity[] = [];
   const seen = new Set<string>();
+  // The public events feed is often sparse (and no longer carries commit messages), so start
+  // from the most recently pushed public repos and their latest commit, then add events.
+  out.push(...(await recentCommits(p, limit)));
+  for (const a of out) seen.add(`${a.date}|${a.repo}|${a.verb}`);
   for (const e of events) {
     if (!e.public || e.repo.name === self) continue;
     const repo = e.repo.name.split('/')[1]!;
@@ -84,6 +88,26 @@ export async function fetchActivity(p: Profile, limit = 5): Promise<Activity[]> 
     out.push(a);
     if (out.length >= limit) break;
   }
+  // Only the last 12 months: this is telemetry, not an archive.
+  const cutoff = new Date(Date.now() - 365 * 864e5).toISOString().slice(0, 10);
+  return out.filter((a) => a.date >= cutoff).sort((a, b) => b.date.localeCompare(a.date)).slice(0, limit);
+}
+
+/** Latest commit on each recently pushed public repo (forks and the profile repo excluded). */
+async function recentCommits(p: Profile, limit: number): Promise<Activity[]> {
+  const res = await fetch(`https://api.github.com/users/${p.githubUser}/repos?sort=pushed&per_page=10&type=owner`, { headers: ghHeaders() });
+  if (!res.ok) throw new Error(`repos API ${res.status}`);
+  const repos = (await res.json()) as Array<{ name: string; fork: boolean; private: boolean; pushed_at: string; default_branch: string }>;
+  const out: Activity[] = [];
+  for (const r of repos) {
+    if (r.fork || r.private || r.name === p.githubUser) continue;
+    const c = await fetch(`https://api.github.com/repos/${p.githubUser}/${r.name}/commits?per_page=1&sha=${r.default_branch}`, { headers: ghHeaders() });
+    if (!c.ok) continue;
+    const [commit] = (await c.json()) as Array<{ commit: { message: string; committer: { date: string } } }>;
+    if (!commit) continue;
+    out.push({ date: commit.commit.committer.date.slice(0, 10), verb: 'pushed', repo: r.name, detail: commit.commit.message.split('\n')[0]! });
+    if (out.length >= limit) break;
+  }
   return out;
 }
 
@@ -103,9 +127,11 @@ export function activityPanel(items: Activity[], generatedAt: string): string {
     const y = top + i * rowH;
     if (i > 0) doc.add(`<path d="M34 ${y - 8}H${W - 34}" stroke="${C.cyanMid}" stroke-opacity=".18"/>`);
     doc.add(doc.text(it.date, 34, y + 24, { font: 'mono', size: 24, fill: C.dim }));
-    const head = `${it.verb} ${it.repo}`;
-    doc.add(doc.text(head, 230, y + 24, { font: 'displayBold', size: 24, fill: C.white }));
     const max = W - 230 - 34;
+    let head = `${it.verb} ${it.repo}`;
+    while (doc.atlas.measure(`${head}...`, 'displayBold', 24) > max) head = head.slice(0, -1);
+    if (head !== `${it.verb} ${it.repo}`) head += '...';
+    doc.add(doc.text(head, 230, y + 24, { font: 'displayBold', size: 24, fill: C.white }));
     // Commit messages are free text: keep printable ASCII and truncate to the column.
     const clean = it.detail.replace(/[^\x20-\x7E]/g, '').trim();
     let detail = clean;
@@ -198,7 +224,7 @@ export function scoreboardPanel(s: Scores, at: string): string {
     // Below 50 counts as an incident: orange, with a label so colour is not the only signal.
     const bad = v < 50;
     doc.add(doc.text(String(Math.round(v)), cx, y, { font: 'displayBold', size: 48, fill: bad ? C.orange : C.cyan, anchor: 'middle' }));
-    doc.add(doc.text(bad ? `${k} (fix me)` : k, cx, y + 32, { font: 'mono', size: 24, fill: C.dim, anchor: 'middle' }));
+    doc.add(doc.text(bad ? `${k} (fix me)` : k, cx, y + 32, { font: 'display', size: 24, fill: C.dim, anchor: 'middle' }));
   });
   return doc.render();
 }
@@ -237,15 +263,21 @@ async function main(): Promise<void> {
   console.log(`contributions in the last year: ${contributions ?? 'unknown'}`);
 
   let scoreboard = !!prev.scoreboard && existsSync(join(out, 'scoreboard.svg'));
+  let lastScan = prev.lastScan;
   if (doScoreboard && p.dynamic.scoreboard) {
     try {
       const { scores, at } = await scanPortfolio(p);
-      writeFileSync(join(out, 'scoreboard.svg'), scoreboardPanel(scores, at));
+      lastScan = { scores, at };
       scoreboard = true;
       console.log(`scoreboard: overall ${scores.overall}`);
     } catch (e) {
       console.warn(`scoreboard skipped, keeping last good panel: ${(e as Error).message}`);
     }
+  }
+  // Re-render from the last good scan so design changes land without spending a scan.
+  if (lastScan && p.dynamic.scoreboard) {
+    writeFileSync(join(out, 'scoreboard.svg'), scoreboardPanel(lastScan.scores as Scores, lastScan.at));
+    scoreboard = true;
   }
 
   writeFileSync(join(out, 'stamp.svg'), stampSvg(today));
@@ -254,6 +286,7 @@ async function main(): Promise<void> {
     contributionsLastYear: contributions ?? prev.contributionsLastYear ?? null,
     contribGraph: (contributions ?? 0) >= p.dynamic.contribThreshold,
     scoreboard,
+    lastScan,
   };
   writeFileSync(prevStatePath, JSON.stringify(state, null, 2) + '\n');
   console.log(`state: ${JSON.stringify(state)}`);

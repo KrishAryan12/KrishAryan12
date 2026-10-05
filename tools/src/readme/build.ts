@@ -19,6 +19,8 @@ export interface DynamicState {
   contributionsLastYear: number | null;
   contribGraph: boolean;
   scoreboard: boolean;
+  /** Last successful Teardown scan, kept so the panel can be re-rendered without re-scanning. */
+  lastScan?: { scores: unknown; at: string };
 }
 
 export function dynamicBase(p: Profile): string {
@@ -75,7 +77,7 @@ export async function buildReadme(): Promise<string> {
     name: p.name,
     titlePlain: p.titlePlain,
     tagline: p.tagline,
-    bootAlt: p.boot.map((b) => `${b.cmd}: ${b.out}`).join('. '),
+    bootAlt: p.boot.map((b) => `${b.cmd}: ${b.out.replace(/\.$/, '')}`).join('. ') + '.',
     positioning: p.positioning.join('\n\n'),
     impactAlt: p.impact.map((i) => `${i.value} ${i.label}`).join(', '),
     impactText: p.impact.map((i) => `- **${i.value}** ${i.label} (${i.detail})`).join('\n'),
