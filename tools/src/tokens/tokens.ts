@@ -1,0 +1,51 @@
+/**
+ * Design tokens: the single source for colour, type, spacing and motion.
+ * `pnpm build:tokens` writes them to /tokens.json so the portfolio redesign can reuse them.
+ */
+export const tokens = {
+  $schema: 'tokens/v1',
+  name: "The Grid, but it's production",
+  color: {
+    void: '#04070D',
+    panel: '#08121C',
+    panelRaised: '#0C1A27',
+    grid: 'rgba(102,246,255,0.10)',
+    gridSolid: '#0E2633',
+    cyan: '#66F6FF',
+    cyanMid: '#18C8E0',
+    cyanDeep: '#0B5D6B',
+    orange: '#FF7A18',
+    orangeHot: '#FF4D00',
+    white: '#E8FAFF',
+    dim: '#7FA6B5',
+  },
+  meaning: {
+    healthy: 'cyan',
+    incident: 'orange',
+    text: 'white',
+    secondaryText: 'dim',
+  },
+  type: {
+    display: { family: 'Oxanium', weight: 600, use: 'titles, numbers, labels' },
+    mono: { family: 'JetBrains Mono', weight: 400, use: 'terminal, data, captions' },
+    // Minimum size (in 800-unit viewBox units) for text a reader needs. 24u renders at 11px on a 375px screen.
+    minReadableUnits: 24,
+    scale: { caption: 24, body: 26, label: 28, heading: 36, readout: 56, hero: 120 },
+  },
+  space: { unit: 4, gutter: 32, panelPadding: 32, radius: 10, tick: 10 },
+  border: { width: 1.5, glowStdDev: 3 },
+  motion: {
+    // Loops are seamless and between 8s and 16s. Glow pulses never faster than 3s (WCAG 2.3.1).
+    loopMin: 8,
+    loopMax: 16,
+    loopDefault: 12,
+    pulseMinPeriod: 3,
+    maxSimultaneous: 3,
+    heroLoop: 8,
+    heroFps: 20,
+    animatable: ['transform', 'opacity', 'stroke-dashoffset'],
+  },
+} as const;
+
+export type Tokens = typeof tokens;
+export const C = tokens.color;
