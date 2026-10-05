@@ -5,6 +5,7 @@
   "description": "Generator for the KrishAryan12 GitHub profile README: The Grid, but it's production.",
   "license": "MIT",
   "type": "module",
+  "packageManager": "pnpm@12.9.1",
   "engines": {
     "node": ">=22"
   },
