@@ -54,45 +54,53 @@
 > returns ranked, confidence-scored hypotheses, then files the Jira ticket and posts the Slack summary.
 > It learns from every incident in a knowledge graph on Apache AGE. **1,094 tests.**
 
-<a href="https://krisharyan.vercel.app/work"><img src="https://img.shields.io/badge/Case_study-0B1220?style=flat-square&logo=vercel&logoColor=6FE7FF" alt="Case study"></a>
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
-<img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI">
-<img src="https://img.shields.io/badge/Azure_OpenAI-0078D4?style=flat-square" alt="Azure OpenAI">
-<img src="https://img.shields.io/badge/Apache_AGE-336791?style=flat-square&logo=postgresql&logoColor=white" alt="Apache AGE">
-<img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React">
-<img src="https://img.shields.io/badge/AWS_EKS-232F3E?style=flat-square" alt="AWS EKS">
+<p>
+  <a href="https://krisharyan.vercel.app/work"><img src="https://img.shields.io/badge/Case_study-0B1220?style=flat-square&logo=vercel&logoColor=6FE7FF" alt="Case study"></a>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI">
+  <img src="https://img.shields.io/badge/Azure_OpenAI-0078D4?style=flat-square" alt="Azure OpenAI">
+  <img src="https://img.shields.io/badge/Apache_AGE-336791?style=flat-square&logo=postgresql&logoColor=white" alt="Apache AGE">
+  <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React">
+  <img src="https://img.shields.io/badge/AWS_EKS-232F3E?style=flat-square" alt="AWS EKS">
+</p>
 
 **LogAgent** · *production, private*
 
 > A ReAct agent with read-only bash on the log server, reading **200k–30M lines per service per day**.
 > No ingestion pipeline, no vector DB, no grep one-liners to regret later. Used by the SRE team.
 
-<img src="https://img.shields.io/badge/ReAct-0B1220?style=flat-square" alt="ReAct">
-<img src="https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white" alt="Bash">
-<img src="https://img.shields.io/badge/AWS_SSM-232F3E?style=flat-square" alt="AWS SSM">
+<p>
+  <img src="https://img.shields.io/badge/ReAct-0B1220?style=flat-square" alt="ReAct">
+  <img src="https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white" alt="Bash">
+  <img src="https://img.shields.io/badge/AWS_SSM-232F3E?style=flat-square" alt="AWS SSM">
+</p>
 
 **Teardown** · *live*
 
 > Paste a URL. A real browser renders it, 65 rules plus axe-core pin every problem,
 > and you get a fix list an AI coding agent can execute.
 
-<a href="https://teardown-lab.vercel.app"><img src="https://img.shields.io/badge/Live-FF8A3D?style=flat-square" alt="Live"></a>
-<a href="https://github.com/KrishAryan12/Teardown"><img src="https://img.shields.io/badge/Code-0B1220?style=flat-square&logo=github&logoColor=white" alt="Code"></a>
-<img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js">
-<img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React">
-<img src="https://img.shields.io/badge/axe--core-663399?style=flat-square" alt="axe-core">
+<p>
+  <a href="https://teardown-lab.vercel.app"><img src="https://img.shields.io/badge/Live-FF8A3D?style=flat-square" alt="Live"></a>
+  <a href="https://github.com/KrishAryan12/Teardown"><img src="https://img.shields.io/badge/Code-0B1220?style=flat-square&logo=github&logoColor=white" alt="Code"></a>
+  <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js">
+  <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React">
+  <img src="https://img.shields.io/badge/axe--core-663399?style=flat-square" alt="axe-core">
+</p>
 
 **Stockroom** · *live*
 
 > Orders that survive concurrency: row-locked transactions, idempotent order creation,
 > audit logs and request-ID JSON logging.
 
-<a href="https://stockroom-fv47.onrender.com/"><img src="https://img.shields.io/badge/Live-FF8A3D?style=flat-square" alt="Live"></a>
-<a href="https://github.com/KrishAryan12/stockroom"><img src="https://img.shields.io/badge/Code-0B1220?style=flat-square&logo=github&logoColor=white" alt="Code"></a>
-<img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI">
-<img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React">
-<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL">
-<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker">
+<p>
+  <a href="https://stockroom-fv47.onrender.com/"><img src="https://img.shields.io/badge/Live-FF8A3D?style=flat-square" alt="Live"></a>
+  <a href="https://github.com/KrishAryan12/stockroom"><img src="https://img.shields.io/badge/Code-0B1220?style=flat-square&logo=github&logoColor=white" alt="Code"></a>
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI">
+  <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React">
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL">
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker">
+</p>
 
 Also in production: **AlertFlow**, which folds alert storms into one triage queue across 185+ services, and an in-house Sentry replacement.
 
@@ -106,7 +114,9 @@ Also in production: **AlertFlow**, which folds alert storms into one triage queu
 
 Fast, accessible, and impossible to mistake for a template. The proof is public: [Teardown](https://teardown-lab.vercel.app) and [the portfolio](https://krisharyan.vercel.app).
 
-<a href="https://krisharyan.vercel.app/contact"><img src="https://img.shields.io/badge/Start_a_conversation-FF8A3D?style=for-the-badge&labelColor=0B1220" alt="Start a conversation"></a>
+<p>
+  <a href="https://krisharyan.vercel.app/contact"><img src="https://img.shields.io/badge/Start_a_conversation-FF8A3D?style=for-the-badge&labelColor=0B1220" alt="Start a conversation"></a>
+</p>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/divider-dark.svg">
