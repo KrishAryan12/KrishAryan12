@@ -138,6 +138,9 @@ Fast, accessible, and impossible to mistake for a template. The proof is public:
 <img src="https://img.shields.io/badge/Datadog-0B1220?style=for-the-badge&logo=datadog&logoColor=A274E8" alt="Datadog">
 <img src="https://img.shields.io/badge/PagerDuty-0B1220?style=for-the-badge&logo=pagerduty&logoColor=25C151" alt="PagerDuty">
 <img src="https://img.shields.io/badge/Vercel-0B1220?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel">
+<img src="https://img.shields.io/badge/Sentry-0B1220?style=for-the-badge&logo=sentry&logoColor=B7A6FF" alt="Sentry">
+<img src="https://img.shields.io/badge/VictoriaMetrics-0B1220?style=for-the-badge&logo=victoriametrics&logoColor=E879F9" alt="VictoriaMetrics">
+<img src="https://img.shields.io/badge/CloudWatch-0B1220?style=for-the-badge" alt="Amazon CloudWatch">
 </td></tr>
 <tr><td><sub><b>STORE</b></sub></td><td>
 <img src="https://img.shields.io/badge/PostgreSQL-0B1220?style=for-the-badge&logo=postgresql&logoColor=6FA8DC" alt="PostgreSQL">
