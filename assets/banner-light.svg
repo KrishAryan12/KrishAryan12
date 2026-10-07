@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="240" viewBox="0 0 1200 240" role="img" aria-labelledby="t">
+<title id="t">Krish Aryan, AI Engineer and Site Reliability Engineer</title>
+<defs>
+<linearGradient id="edges" x1="0" x2="1" y1="0" y2="0">
+<stop offset="0" stop-color="#fff"/><stop offset=".3" stop-color="#fff" stop-opacity="0"/>
+<stop offset=".7" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff"/>
+</linearGradient>
+<linearGradient id="depth" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff"/>
+</linearGradient>
+<mask id="me" maskUnits="userSpaceOnUse" x="0" y="0" width="1200" height="240"><rect width="1200" height="240" fill="url(#edges)"/></mask>
+<mask id="md" maskUnits="userSpaceOnUse" x="0" y="178" width="1200" height="62"><rect y="178" width="1200" height="62" fill="url(#depth)"/></mask>
+<clipPath id="c"><rect width="1200" height="240" rx="12"/></clipPath>
+</defs>
+<g clip-path="url(#c)">
+<rect width="1200" height="240" fill="#F6F9FC"/>
+<g mask="url(#me)"><g mask="url(#md)" opacity="0.5"><g stroke="#1FA9CF" stroke-width="1" fill="none"><line x1="600" y1="178" x2="-940" y2="240"/><line x1="600" y1="178" x2="-830" y2="240"/><line x1="600" y1="178" x2="-720" y2="240"/><line x1="600" y1="178" x2="-610" y2="240"/><line x1="600" y1="178" x2="-500" y2="240"/><line x1="600" y1="178" x2="-390" y2="240"/><line x1="600" y1="178" x2="-280" y2="240"/><line x1="600" y1="178" x2="-170" y2="240"/><line x1="600" y1="178" x2="-60" y2="240"/><line x1="600" y1="178" x2="50" y2="240"/><line x1="600" y1="178" x2="160" y2="240"/><line x1="600" y1="178" x2="270" y2="240"/><line x1="600" y1="178" x2="380" y2="240"/><line x1="600" y1="178" x2="490" y2="240"/><line x1="600" y1="178" x2="600" y2="240"/><line x1="600" y1="178" x2="710" y2="240"/><line x1="600" y1="178" x2="820" y2="240"/><line x1="600" y1="178" x2="930" y2="240"/><line x1="600" y1="178" x2="1040" y2="240"/><line x1="600" y1="178" x2="1150" y2="240"/><line x1="600" y1="178" x2="1260" y2="240"/><line x1="600" y1="178" x2="1370" y2="240"/><line x1="600" y1="178" x2="1480" y2="240"/><line x1="600" y1="178" x2="1590" y2="240"/><line x1="600" y1="178" x2="1700" y2="240"/><line x1="600" y1="178" x2="1810" y2="240"/><line x1="600" y1="178" x2="1920" y2="240"/><line x1="600" y1="178" x2="2030" y2="240"/><line x1="600" y1="178" x2="2140" y2="240"/><line x1="0" y1="240.0" x2="1200" y2="240.0"/><line x1="0" y1="223.9" x2="1200" y2="223.9"/><line x1="0" y1="210.6" x2="1200" y2="210.6"/><line x1="0" y1="200.1" x2="1200" y2="200.1"/><line x1="0" y1="192.4" x2="1200" y2="192.4"/><line x1="0" y1="186.9" x2="1200" y2="186.9"/><line x1="0" y1="183.2" x2="1200" y2="183.2"/></g></g></g>
+</g>
+<rect x=".5" y=".5" width="1199" height="239" rx="11.5" fill="none" stroke="#0B122014"/>
+<g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" text-anchor="middle">
+<text x="593.0" y="118" font-size="54" font-weight="600" letter-spacing="14" fill="#0B1220">KRISH ARYAN</text>
+<text x="598.5" y="158" font-size="19" letter-spacing="3" fill="#0A7FA3">AI Engineer · Site Reliability Engineer</text>
+</g>
+</svg>
