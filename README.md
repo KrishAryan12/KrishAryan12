@@ -103,6 +103,8 @@ Fast, accessible, and impossible to mistake for a template. The proof is public:
 <img src="https://img.shields.io/badge/JavaScript-0B1220?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript">
 <img src="https://img.shields.io/badge/Java-0B1220?style=for-the-badge&logo=openjdk&logoColor=ED8B00" alt="Java">
 <img src="https://img.shields.io/badge/Bash-0B1220?style=for-the-badge&logo=gnubash&logoColor=4EAA25" alt="Bash">
+</td></tr>
+<tr><td><sub><b>SHIP</b></sub></td><td>
 <img src="https://img.shields.io/badge/React-0B1220?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React">
 <img src="https://img.shields.io/badge/Next.js-0B1220?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js">
 <img src="https://img.shields.io/badge/Tailwind-0B1220?style=for-the-badge&logo=tailwindcss&logoColor=38BDF8" alt="Tailwind">
@@ -119,7 +121,7 @@ Fast, accessible, and impossible to mistake for a template. The proof is public:
 <tr><td><sub><b>WATCH</b></sub></td><td>
 <img src="https://img.shields.io/badge/Prometheus-0B1220?style=for-the-badge&logo=prometheus&logoColor=E6522C" alt="Prometheus">
 <img src="https://img.shields.io/badge/Grafana-0B1220?style=for-the-badge&logo=grafana&logoColor=F46800" alt="Grafana">
-<img src="https://img.shields.io/badge/Elasticsearch-0B1220?style=for-the-badge&logo=elasticsearch&logoColor=00BFB3" alt="Elasticsearch">
+<img src="https://img.shields.io/badge/ELK-0B1220?style=for-the-badge&logo=elasticsearch&logoColor=00BFB3" alt="ELK (Elasticsearch)">
 <img src="https://img.shields.io/badge/OpenTelemetry-0B1220?style=for-the-badge&logo=opentelemetry&logoColor=F5A800" alt="OpenTelemetry">
 <img src="https://img.shields.io/badge/Datadog-0B1220?style=for-the-badge&logo=datadog&logoColor=A274E8" alt="Datadog">
 <img src="https://img.shields.io/badge/PagerDuty-0B1220?style=for-the-badge&logo=pagerduty&logoColor=25C151" alt="PagerDuty">
@@ -138,9 +140,11 @@ Fast, accessible, and impossible to mistake for a template. The proof is public:
 <a href="https://ieeexplore.ieee.org/document/10714893"><img src="https://img.shields.io/badge/IEEE_Xplore-I--SMAC_2024-6FE7FF?style=flat-square&labelColor=0B1220" alt="IEEE Xplore, I-SMAC 2024"></a>&nbsp; **Privacy-Preserving Border Surveillance System**<br>
 <a href="https://thegrenze.com/index.php?display=page&view=journalabstract&absid=3411&id=8"><img src="https://img.shields.io/badge/Scopus-ACT_2024-6FE7FF?style=flat-square&labelColor=0B1220" alt="Scopus, ACT 2024"></a>&nbsp; **Real-Time Biometric Facial Recognition Attendance System**
 
+<p>
 <img src="https://img.shields.io/badge/MCP_·_MCP_Advanced_·_Claude_101-0B1220?style=flat-square&logo=anthropic&logoColor=D97757" alt="Anthropic: Intro to MCP, MCP Advanced Topics, Claude 101">
 <img src="https://img.shields.io/badge/AWS_Cloud_Practitioner_·_DevOps_on_AWS-0B1220?style=flat-square" alt="AWS: Cloud Practitioner Essentials, Getting Started with DevOps on AWS">
 <img src="https://img.shields.io/badge/ClickHouse_Associate_·_chDB_Professional-0B1220?style=flat-square&logo=clickhouse&logoColor=FFCC01" alt="ClickHouse: Database Associate, chDB Professional">
+</p>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/divider-dark.svg">
