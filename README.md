@@ -34,25 +34,33 @@ I also design and build **websites** for people who want theirs to say something
 <tr>
 <td width="50%" valign="top">
 
-**TraceLens** &nbsp;<img src="https://img.shields.io/badge/production-private-6FE7FF?style=flat-square&labelColor=0B1220" alt="production, private">
+<img src="https://img.shields.io/badge/production-private-6FE7FF?style=flat-square&labelColor=0B1220" alt="production, private">
 
-An autonomous root-cause agent. A native ReAct loop on GPT-4o, no agent frameworks, **40+ tools across 12+ sources**. It returns ranked, confidence-scored hypotheses, files the Jira ticket and posts the Slack summary, then remembers the incident in a knowledge graph on Apache AGE. **1,094 tests.**
+#### TraceLens
+
+An autonomous root-cause agent. A native ReAct loop on GPT-4o, no agent frameworks, **40+ tools across 12+ sources**. Ranked, confidence-scored hypotheses, a Jira ticket and a Slack summary, then the incident goes into a knowledge graph on Apache AGE. **1,094 tests.**
 
 <a href="https://krisharyan.vercel.app/work"><img src="https://img.shields.io/badge/Read_the_case_study_→-0B1220?style=flat-square" alt="Read the case study"></a>
 
 </td>
 <td width="50%" valign="top">
 
-**LogAgent** &nbsp;<img src="https://img.shields.io/badge/production-private-6FE7FF?style=flat-square&labelColor=0B1220" alt="production, private">
+<img src="https://img.shields.io/badge/production-private-6FE7FF?style=flat-square&labelColor=0B1220" alt="production, private">
+
+#### LogAgent
 
 A ReAct agent with read-only bash on the log server, reading **200k–30M lines per service per day**. No ingestion pipeline, no vector DB, no grep one-liners to regret later. Used by the SRE team.
+
+<a href="https://krisharyan.vercel.app/work"><img src="https://img.shields.io/badge/Read_the_case_study_→-0B1220?style=flat-square" alt="Read the case study"></a>
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-**Teardown** &nbsp;<img src="https://img.shields.io/badge/status-live-FF8A3D?style=flat-square&labelColor=0B1220" alt="live">
+<img src="https://img.shields.io/badge/status-live-FF8A3D?style=flat-square&labelColor=0B1220" alt="live">
+
+#### Teardown
 
 Paste a URL. A real browser renders it, **65 rules plus axe-core** pin every problem, and you get a fix list an AI coding agent can execute.
 
@@ -62,7 +70,9 @@ Paste a URL. A real browser renders it, **65 rules plus axe-core** pin every pro
 </td>
 <td width="50%" valign="top">
 
-**Stockroom** &nbsp;<img src="https://img.shields.io/badge/status-live-FF8A3D?style=flat-square&labelColor=0B1220" alt="live">
+<img src="https://img.shields.io/badge/status-live-FF8A3D?style=flat-square&labelColor=0B1220" alt="live">
+
+#### Stockroom
 
 Orders that survive concurrency: **row-locked transactions**, idempotent order creation, audit logs and request-ID JSON logging.
 
@@ -93,8 +103,10 @@ Fast, accessible, and impossible to mistake for a template. The proof is public:
 <tr><td><sub><b>AGENTS</b></sub></td><td>
 <img src="https://img.shields.io/badge/Claude-0B1220?style=for-the-badge&logo=anthropic&logoColor=D97757" alt="Claude">
 <img src="https://img.shields.io/badge/Gemini-0B1220?style=for-the-badge&logo=googlegemini&logoColor=A78BFA" alt="Gemini">
-<img src="https://img.shields.io/badge/Azure_OpenAI-0B1220?style=for-the-badge" alt="Azure OpenAI">
+<img src="https://img.shields.io/badge/OpenAI-0B1220?style=for-the-badge" alt="OpenAI">
+<img src="https://img.shields.io/badge/Azure_AI_Foundry-0B1220?style=for-the-badge" alt="Azure AI Foundry">
 <img src="https://img.shields.io/badge/MCP-0B1220?style=for-the-badge&logo=modelcontextprotocol&logoColor=white" alt="MCP">
+<img src="https://img.shields.io/badge/LangChain-0B1220?style=for-the-badge&logo=langchain&logoColor=white" alt="LangChain">
 <img src="https://img.shields.io/badge/Bedrock-0B1220?style=for-the-badge" alt="AWS Bedrock">
 </td></tr>
 <tr><td><sub><b>BUILD</b></sub></td><td>
@@ -125,6 +137,7 @@ Fast, accessible, and impossible to mistake for a template. The proof is public:
 <img src="https://img.shields.io/badge/OpenTelemetry-0B1220?style=for-the-badge&logo=opentelemetry&logoColor=F5A800" alt="OpenTelemetry">
 <img src="https://img.shields.io/badge/Datadog-0B1220?style=for-the-badge&logo=datadog&logoColor=A274E8" alt="Datadog">
 <img src="https://img.shields.io/badge/PagerDuty-0B1220?style=for-the-badge&logo=pagerduty&logoColor=25C151" alt="PagerDuty">
+<img src="https://img.shields.io/badge/Vercel-0B1220?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel">
 </td></tr>
 <tr><td><sub><b>STORE</b></sub></td><td>
 <img src="https://img.shields.io/badge/PostgreSQL-0B1220?style=for-the-badge&logo=postgresql&logoColor=6FA8DC" alt="PostgreSQL">
@@ -135,16 +148,57 @@ Fast, accessible, and impossible to mistake for a template. The proof is public:
 </td></tr>
 </table>
 
-### `05` &nbsp;Published & certified
+### `05` &nbsp;Telemetry
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/KrishAryan12/KrishAryan12/stats/stats-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/KrishAryan12/KrishAryan12/stats/stats-light.svg">
+  <img src="https://raw.githubusercontent.com/KrishAryan12/KrishAryan12/stats/stats-dark.svg" width="100%" alt="GitHub activity over the last 365 days: contribution grid, totals and top languages, redrawn daily by a GitHub Action in this repo.">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/divider-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/divider-light.svg">
+  <img src="assets/divider-dark.svg" width="100%" alt="">
+</picture>
+
+### `06` &nbsp;Certified
+
+<p>
+  <img src="https://img.shields.io/badge/certifications-12-6FE7FF?style=for-the-badge&labelColor=0B1220" alt="12 certifications">
+  <img src="https://img.shields.io/badge/issuers-5-6FE7FF?style=for-the-badge&labelColor=0B1220" alt="5 issuers">
+  <img src="https://img.shields.io/badge/verifiable_online-7-FF8A3D?style=for-the-badge&labelColor=0B1220" alt="7 verifiable online">
+</p>
+
+<table>
+<tr><td valign="top"><img src="https://img.shields.io/badge/Anthropic-0B1220?style=for-the-badge&logo=anthropic&logoColor=D97757" alt="Anthropic"></td><td>
+<a href="https://verify.skilljar.com/c/h3uewwhjaepk"><b>Claude Code 101</b></a> <sub>↗</sub> &nbsp;<sub><code>APR 2026</code></sub><br>
+<a href="https://verify.skilljar.com/c/4aphiibon45o"><b>Model Context Protocol: Advanced Topics</b></a> <sub>↗</sub> &nbsp;<sub><code>AUG 2025</code></sub><br>
+<a href="https://verify.skilljar.com/c/nzmm3g8t9dbu"><b>Introduction to Model Context Protocol</b></a> <sub>↗</sub> &nbsp;<sub><code>AUG 2025</code></sub>
+</td></tr>
+<tr><td valign="top"><img src="https://img.shields.io/badge/AWS-0B1220?style=for-the-badge" alt="AWS"></td><td>
+<b>Integrating Amazon Bedrock powered Agents with MCP Servers using the Strands Agents SDK</b> &nbsp;<sub><code>OCT 2025</code></sub><br>
+<b>Operationalize Generative AI Applications (FMOps/LLMOps)</b> &nbsp;<sub><code>SEP 2025</code></sub><br>
+<b>Generative AI with Diffusion Models</b> &nbsp;<sub><code>SEP 2025</code></sub><br>
+<b>AWS Cloud Practitioner Essentials</b> &nbsp;<sub><code>SEP 2025</code></sub><br>
+<b>Getting Started with DevOps on AWS</b> &nbsp;<sub><code>AUG 2025</code></sub>
+</td></tr>
+<tr><td valign="top"><img src="https://img.shields.io/badge/ClickHouse-0B1220?style=for-the-badge&logo=clickhouse&logoColor=FFCC01" alt="ClickHouse"></td><td>
+<a href="https://www.credly.com/badges/c569bec6-94e8-4aea-995d-45ca5c1be0a3/public_url"><b>ClickHouse Database Associate</b></a> <sub>↗</sub> &nbsp;<sub><code>OCT 2025</code></sub><br>
+<a href="https://www.credly.com/badges/53ec6458-ecd6-416a-88b6-ad951bfd82fe/public_url"><b>chDB Professional</b></a> <sub>↗</sub> &nbsp;<sub><code>OCT 2025</code></sub>
+</td></tr>
+<tr><td valign="top"><img src="https://img.shields.io/badge/LangChain-0B1220?style=for-the-badge&logo=langchain&logoColor=white" alt="LangChain"></td><td>
+<a href="https://academy.langchain.com/certificates/8g0v1xpggw"><b>LangChain Essentials · Python</b></a> <sub>↗</sub> &nbsp;<sub><code>OCT 2025</code></sub>
+</td></tr>
+<tr><td valign="top"><img src="https://img.shields.io/badge/DeepLearning.AI-0B1220?style=for-the-badge" alt="DeepLearning.AI"></td><td>
+<a href="https://learn.deeplearning.ai/accomplishments/ceaf2f1f-0a34-4e96-9f2e-c6307022a4e3"><b>Knowledge Graphs for AI Agents: API Discovery</b></a> <sub>↗</sub> &nbsp;<sub><code>SEP 2025</code></sub>
+</td></tr>
+</table>
+
+### `07` &nbsp;Published
 
 <a href="https://ieeexplore.ieee.org/document/10714893"><img src="https://img.shields.io/badge/IEEE_Xplore-I--SMAC_2024-6FE7FF?style=flat-square&labelColor=0B1220" alt="IEEE Xplore, I-SMAC 2024"></a>&nbsp; **Privacy-Preserving Border Surveillance System**<br>
 <a href="https://thegrenze.com/index.php?display=page&view=journalabstract&absid=3411&id=8"><img src="https://img.shields.io/badge/Scopus-ACT_2024-6FE7FF?style=flat-square&labelColor=0B1220" alt="Scopus, ACT 2024"></a>&nbsp; **Real-Time Biometric Facial Recognition Attendance System**
-
-<p>
-<img src="https://img.shields.io/badge/MCP_·_MCP_Advanced_·_Claude_101-0B1220?style=flat-square&logo=anthropic&logoColor=D97757" alt="Anthropic: Intro to MCP, MCP Advanced Topics, Claude 101">
-<img src="https://img.shields.io/badge/AWS_Cloud_Practitioner_·_DevOps_on_AWS-0B1220?style=flat-square" alt="AWS: Cloud Practitioner Essentials, Getting Started with DevOps on AWS">
-<img src="https://img.shields.io/badge/ClickHouse_Associate_·_chDB_Professional-0B1220?style=flat-square&logo=clickhouse&logoColor=FFCC01" alt="ClickHouse: Database Associate, chDB Professional">
-</p>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/divider-dark.svg">
