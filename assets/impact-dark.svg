@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="170" viewBox="0 0 1200 170" role="img" aria-labelledby="t">
+<title id="t">480× faster incident triage (~2 h to ~15 s), 215+ services on call, 3 Sev-1/P0s prevented, 40+ agent tools across 12+ sources</title>
+<rect x="0.5" y=".5" width="284.0" height="169" rx="10" fill="#0B1220" stroke="#6FE7FF33"/>
+<path d="M8.0 22V8H22.0" fill="none" stroke="#6FE7FF" stroke-opacity=".8" stroke-width="1.5"/>
+<path d="M277.0 22V8H263.0" fill="none" stroke="#6FE7FF" stroke-opacity=".8" stroke-width="1.5"/>
+<path d="M8.0 148V162H22.0" fill="none" stroke="#6FE7FF" stroke-opacity=".8" stroke-width="1.5"/>
+<path d="M277.0 148V162H263.0" fill="none" stroke="#6FE7FF" stroke-opacity=".8" stroke-width="1.5"/>
+<text x="26.0" y="38" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="2" fill="#8FA3BF">01</text>
+<text x="142.5" y="96" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="50" font-weight="700" fill="#FF8A3D">480×</text>
+<text x="142.5" y="126" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" fill="#E6EEF8">faster incident triage</text>
+<text x="142.5" y="148" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="1" fill="#8FA3BF">~2 h → ~15 s</text>
+<rect x="305.5" y=".5" width="284.0" height="169" rx="10" fill="#0B1220" stroke="#6FE7FF33"/>
+<path d="M313.0 22V8H327.0" fill="none" stroke="#6FE7FF" stroke-opacity=".8" stroke-width="1.5"/>
+<path d="M582.0 22V8H568.0" fill="none" stroke="#6FE7FF" stroke-opacity=".8" stroke-width="1.5"/>
+<path d="M313.0 148V162H327.0" fill="none" stroke="#6FE7FF" stroke-opacity=".8" stroke-width="1.5"/>
+<path d="M582.0 148V162H568.0" fill="none" stroke="#6FE7FF" stroke-opacity=".8" stroke-width="1.5"/>
+<text x="331.0" y="38" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="2" fill="#8FA3BF">02</text>
+<text x="447.5" y="96" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="50" font-weight="700" fill="#6FE7FF">215+</text>
+<text x="447.5" y="126" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" fill="#E6EEF8">services on call</text>
+<text x="447.5" y="148" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="1" fill="#8FA3BF">primary owner</text>
+<rect x="610.5" y=".5" width="284.0" height="169" rx="10" fill="#0B1220" stroke="#6FE7FF33"/>
+<path d="M618.0 22V8H632.0" fill="none" stroke="#6FE7FF" stroke-opacity=".8" stroke-width="1.5"/>
+<path d="M887.0 22V8H873.0" fill="none" stroke="#6FE7FF" stroke-opacity=".8" stroke-width="1.5"/>
+<path d="M618.0 148V162H632.0" fill="none" stroke="#6FE7FF" stroke-opacity=".8" stroke-width="1.5"/>
+<path d="M887.0 148V162H873.0" fill="none" stroke="#6FE7FF" stroke-opacity=".8" stroke-width="1.5"/>
+<text x="636.0" y="38" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="2" fill="#8FA3BF">03</text>
+<text x="752.5" y="96" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="50" font-weight="700" fill="#6FE7FF">3</text>
+<text x="752.5" y="126" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" fill="#E6EEF8">Sev-1/P0s prevented</text>
+<text x="752.5" y="148" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="1" fill="#8FA3BF">caught early</text>
+<rect x="915.5" y=".5" width="284.0" height="169" rx="10" fill="#0B1220" stroke="#6FE7FF33"/>
+<path d="M923.0 22V8H937.0" fill="none" stroke="#6FE7FF" stroke-opacity=".8" stroke-width="1.5"/>
+<path d="M1192.0 22V8H1178.0" fill="none" stroke="#6FE7FF" stroke-opacity=".8" stroke-width="1.5"/>
+<path d="M923.0 148V162H937.0" fill="none" stroke="#6FE7FF" stroke-opacity=".8" stroke-width="1.5"/>
+<path d="M1192.0 148V162H1178.0" fill="none" stroke="#6FE7FF" stroke-opacity=".8" stroke-width="1.5"/>
+<text x="941.0" y="38" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="2" fill="#8FA3BF">04</text>
+<text x="1057.5" y="96" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="50" font-weight="700" fill="#6FE7FF">40+</text>
+<text x="1057.5" y="126" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" fill="#E6EEF8">agent tools</text>
+<text x="1057.5" y="148" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="1" fill="#8FA3BF">across 12+ sources</text>
+</svg>
