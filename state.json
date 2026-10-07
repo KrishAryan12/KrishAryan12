@@ -1,0 +1,22 @@
+{
+  "generatedAt": "2026-10-07T08:41:50.844Z",
+  "contributionsLastYear": 114,
+  "contribGraph": false,
+  "scoreboard": true,
+  "stats": true,
+  "lastScan": {
+    "scores": {
+      "overall": 89,
+      "performance": {
+        "score": 92,
+        "source": "psi"
+      },
+      "seo": 95,
+      "accessibility": 76,
+      "ux": 99,
+      "brand": 87,
+      "security": 96
+    },
+    "at": "2026-10-05"
+  }
+}
