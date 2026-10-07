@@ -171,7 +171,7 @@ Fast, accessible, and impossible to mistake for a template. The proof is public:
 </picture>
 
 <p>
-  <sub><b>VERIFY</b></sub>&nbsp;
+  <img src="https://img.shields.io/badge/verify_online-6FE7FF?style=flat-square" alt="Verify online:">
   <a href="https://verify.skilljar.com/c/h3uewwhjaepk"><img src="https://img.shields.io/badge/Claude_Code_101_↗-0B1220?style=flat-square&logo=anthropic&logoColor=D97757" alt="Verify Claude Code 101"></a>
   <a href="https://verify.skilljar.com/c/4aphiibon45o"><img src="https://img.shields.io/badge/MCP:_Advanced_Topics_↗-0B1220?style=flat-square&logo=anthropic&logoColor=D97757" alt="Verify MCP: Advanced Topics"></a>
   <a href="https://verify.skilljar.com/c/nzmm3g8t9dbu"><img src="https://img.shields.io/badge/Intro_to_MCP_↗-0B1220?style=flat-square&logo=anthropic&logoColor=D97757" alt="Verify Intro to MCP"></a>
