@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" role="img" aria-labelledby="t d">
+<title id="t">Krish Aryan · AI Engineer · Site Reliability Engineer</title>
+<desc id="d">I automate the 3 AM page out of existence. A cyan light cycle cuts off an orange incident trail on the Grid.</desc>
+<style>
+.draw{stroke-dasharray:1;animation:draw 1.3s cubic-bezier(.6,0,.2,1) both}
+.drawo{stroke-dasharray:1;animation:draw 1s cubic-bezier(.6,0,.2,1) .2s both}
+.wall,.wall2{animation:fade .6s ease-out .9s both}
+.frag{animation:fade .5s ease-out both}
+.head,.label{animation:fade .5s ease-out 1.3s both}
+@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<defs>
+<clipPath id="clip"><rect width="1200" height="380" rx="16"/></clipPath>
+<linearGradient id="sky" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#060A13"/><stop offset=".69" stop-color="#0C1626"/><stop offset="1" stop-color="#070C16"/></linearGradient>
+<radialGradient id="glow"><stop offset="0" stop-color="#6FE7FF" stop-opacity=".28"/><stop offset="1" stop-color="#6FE7FF" stop-opacity="0"/></radialGradient>
+<linearGradient id="hz" x1="0" x2="1"><stop offset="0" stop-color="#6FE7FF" stop-opacity="0"/><stop offset=".5" stop-color="#6FE7FF"/><stop offset="1" stop-color="#6FE7FF" stop-opacity="0"/></linearGradient>
+<linearGradient id="depth" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".1"/><stop offset="1" stop-color="#fff"/></linearGradient>
+<mask id="md" maskUnits="userSpaceOnUse" x="0" y="262" width="1200" height="118"><rect y="262" width="1200" height="118" fill="url(#depth)"/></mask>
+<linearGradient id="wc" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#6FE7FF" stop-opacity="0"/><stop offset="1" stop-color="#6FE7FF" stop-opacity=".35"/></linearGradient>
+<linearGradient id="wo" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#FF8A3D" stop-opacity="0"/><stop offset="1" stop-color="#FF8A3D" stop-opacity=".4"/></linearGradient>
+</defs>
+<g clip-path="url(#clip)">
+<rect width="1200" height="380" fill="url(#sky)"/>
+<g fill="#6FE7FF" fill-opacity=".06" stroke="#6FE7FF" stroke-opacity=".18"><rect x="40" y="252" width="24" height="10"/><rect x="84" y="256" width="14" height="6"/><rect x="102" y="234" width="24" height="28"/><rect x="130" y="256" width="18" height="6"/><rect x="152" y="242" width="30" height="20"/><rect x="186" y="256" width="18" height="6"/><rect x="224" y="234" width="14" height="28"/><rect x="242" y="226" width="18" height="36"/><rect x="264" y="256" width="30" height="6"/><rect x="302" y="234" width="14" height="28"/><rect x="324" y="242" width="24" height="20"/><rect x="356" y="234" width="14" height="28"/><rect x="382" y="256" width="18" height="6"/><rect x="408" y="256" width="24" height="6"/><rect x="436" y="254" width="14" height="8"/><rect x="458" y="254" width="30" height="8"/><rect x="508" y="254" width="24" height="8"/><rect x="552" y="254" width="24" height="8"/><rect x="584" y="254" width="18" height="8"/><rect x="610" y="254" width="14" height="8"/><rect x="636" y="254" width="30" height="8"/><rect x="686" y="254" width="24" height="8"/><rect x="714" y="254" width="14" height="8"/><rect x="748" y="254" width="18" height="8"/><rect x="774" y="254" width="30" height="8"/><rect x="808" y="254" width="14" height="8"/><rect x="834" y="226" width="24" height="36"/><rect x="870" y="234" width="30" height="28"/><rect x="920" y="256" width="14" height="6"/><rect x="946" y="226" width="30" height="36"/><rect x="980" y="226" width="14" height="36"/><rect x="1006" y="248" width="30" height="14"/><rect x="1056" y="256" width="24" height="6"/><rect x="1100" y="252" width="24" height="10"/><rect x="1128" y="256" width="30" height="6"/></g>
+<ellipse cx="600" cy="262" rx="620" ry="56" fill="url(#glow)"/>
+<g mask="url(#md)" stroke="#6FE7FF" stroke-opacity=".42" fill="none"><line x1="600" y1="262" x2="-1200" y2="380"/><line x1="600" y1="262" x2="-1110" y2="380"/><line x1="600" y1="262" x2="-1020" y2="380"/><line x1="600" y1="262" x2="-930" y2="380"/><line x1="600" y1="262" x2="-840" y2="380"/><line x1="600" y1="262" x2="-750" y2="380"/><line x1="600" y1="262" x2="-660" y2="380"/><line x1="600" y1="262" x2="-570" y2="380"/><line x1="600" y1="262" x2="-480" y2="380"/><line x1="600" y1="262" x2="-390" y2="380"/><line x1="600" y1="262" x2="-300" y2="380"/><line x1="600" y1="262" x2="-210" y2="380"/><line x1="600" y1="262" x2="-120" y2="380"/><line x1="600" y1="262" x2="-30" y2="380"/><line x1="600" y1="262" x2="60" y2="380"/><line x1="600" y1="262" x2="150" y2="380"/><line x1="600" y1="262" x2="240" y2="380"/><line x1="600" y1="262" x2="330" y2="380"/><line x1="600" y1="262" x2="420" y2="380"/><line x1="600" y1="262" x2="510" y2="380"/><line x1="600" y1="262" x2="600" y2="380"/><line x1="600" y1="262" x2="690" y2="380"/><line x1="600" y1="262" x2="780" y2="380"/><line x1="600" y1="262" x2="870" y2="380"/><line x1="600" y1="262" x2="960" y2="380"/><line x1="600" y1="262" x2="1050" y2="380"/><line x1="600" y1="262" x2="1140" y2="380"/><line x1="600" y1="262" x2="1230" y2="380"/><line x1="600" y1="262" x2="1320" y2="380"/><line x1="600" y1="262" x2="1410" y2="380"/><line x1="600" y1="262" x2="1500" y2="380"/><line x1="600" y1="262" x2="1590" y2="380"/><line x1="600" y1="262" x2="1680" y2="380"/><line x1="600" y1="262" x2="1770" y2="380"/><line x1="600" y1="262" x2="1860" y2="380"/><line x1="600" y1="262" x2="1950" y2="380"/><line x1="600" y1="262" x2="2040" y2="380"/><line x1="600" y1="262" x2="2130" y2="380"/><line x1="600" y1="262" x2="2220" y2="380"/><line x1="600" y1="262" x2="2310" y2="380"/><line x1="600" y1="262" x2="2400" y2="380"/><line x1="0" y1="380.0" x2="1200" y2="380.0"/><line x1="0" y1="356.4" x2="1200" y2="356.4"/><line x1="0" y1="335.8" x2="1200" y2="335.8"/><line x1="0" y1="318.2" x2="1200" y2="318.2"/><line x1="0" y1="302.7" x2="1200" y2="302.7"/><line x1="0" y1="290.1" x2="1200" y2="290.1"/><line x1="0" y1="280.2" x2="1200" y2="280.2"/><line x1="0" y1="272.7" x2="1200" y2="272.7"/><line x1="0" y1="267.9" x2="1200" y2="267.9"/></g>
+<rect x="0" y="261.25" width="1200" height="1.5" fill="url(#hz)"/>
+<path class="wall2" d="M1220 318 H716 V308 H1220 Z" fill="url(#wo)"/>
+<path d="M1220 318 H716" class="drawo" pathLength="1" fill="none" stroke="#FF8A3D" stroke-opacity="0.10" stroke-width="12" stroke-linejoin="miter"/><path d="M1220 318 H716" class="drawo" pathLength="1" fill="none" stroke="#FF8A3D" stroke-opacity="0.35" stroke-width="5" stroke-linejoin="miter"/><path d="M1220 318 H716" class="drawo" pathLength="1" fill="none" stroke="#FFE6D3" stroke-width="1.8" stroke-linejoin="miter"/>
+<rect class="frag" x="704" y="314" width="6" height="6" fill="#FF8A3D" fill-opacity="0.95" style="animation-delay:1.25s"/><rect class="frag" x="692" y="306" width="4" height="4" fill="#FF8A3D" fill-opacity="0.8" style="animation-delay:1.3s"/><rect class="frag" x="684" y="321" width="4" height="4" fill="#FF8A3D" fill-opacity="0.7" style="animation-delay:1.33s"/><rect class="frag" x="672" y="310" width="3" height="3" fill="#FF8A3D" fill-opacity="0.55" style="animation-delay:1.38s"/><rect class="frag" x="662" y="300" width="3" height="3" fill="#FF8A3D" fill-opacity="0.4" style="animation-delay:1.42s"/><rect class="frag" x="676" y="327" width="2" height="2" fill="#FF8A3D" fill-opacity="0.45" style="animation-delay:1.45s"/><rect class="frag" x="650" y="316" width="2" height="2" fill="#FF8A3D" fill-opacity="0.3" style="animation-delay:1.5s"/><rect class="frag" x="694" y="296" width="2" height="2" fill="#FF8A3D" fill-opacity="0.5" style="animation-delay:1.4s"/>
+<path class="wall" d="M-20 352 H760 L628 278 L628 272 L760 338 H-20 Z" fill="url(#wc)"/>
+<path d="M-20 352 H760 L628 278" class="draw" pathLength="1" fill="none" stroke="#6FE7FF" stroke-opacity="0.10" stroke-width="12" stroke-linejoin="miter"/><path d="M-20 352 H760 L628 278" class="draw" pathLength="1" fill="none" stroke="#6FE7FF" stroke-opacity="0.35" stroke-width="5" stroke-linejoin="miter"/><path d="M-20 352 H760 L628 278" class="draw" pathLength="1" fill="none" stroke="#E9FDFF" stroke-width="1.8" stroke-linejoin="miter"/>
+<g class="head"><circle cx="628" cy="278" r="9" fill="#6FE7FF" fill-opacity=".25"/><circle cx="628" cy="278" r="3.2" fill="#FFFFFF"/></g>
+<g class="label" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" letter-spacing="2">
+<line x1="704" y1="304" x2="736" y2="232" stroke="#FF8A3D" stroke-opacity=".6"/>
+<text x="742" y="230" fill="#FF8A3D">INCIDENT · TRIAGED IN ~15 S</text>
+</g>
+</g>
+<rect x=".5" y=".5" width="1199" height="379" rx="15.5" fill="none" stroke="#6FE7FF" stroke-opacity=".22"/>
+<g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" letter-spacing="2.5" fill="#7F93AF">
+<text x="34" y="38">GRID://KRISHARYAN12</text>
+<text x="1166" y="38" text-anchor="end">BENGALURU · IST <tspan fill="#6FE7FF">■</tspan> ON CALL</text>
+</g>
+<g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" text-anchor="middle">
+<text x="591.0" y="122" font-size="72" font-weight="700" letter-spacing="18" fill="#F2F7FD">KRISH ARYAN</text>
+<text x="598.5" y="162" font-size="19" letter-spacing="3" fill="#6FE7FF">AI Engineer · Site Reliability Engineer</text>
+<text x="600.0" y="198" font-size="15" font-style="italic" fill="#A9B8CC">I automate the <tspan fill="#FF8A3D">3 AM page</tspan> out of existence.</text>
+</g>
+</svg>

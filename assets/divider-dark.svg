@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="44" viewBox="0 0 1200 44" role="presentation">
+<defs><linearGradient id="gc" gradientUnits="userSpaceOnUse" x1="0" x2="560" y1="0" y2="0"><stop offset="0" stop-color="#6FE7FF" stop-opacity="0"/><stop offset=".55" stop-color="#6FE7FF"/></linearGradient><linearGradient id="go" gradientUnits="userSpaceOnUse" x1="1200" x2="640" y1="0" y2="0"><stop offset="0" stop-color="#FF8A3D" stop-opacity="0"/><stop offset=".55" stop-color="#FF8A3D"/></linearGradient></defs>
+<path d="M0 12 H372 V22 H566" fill="none" stroke="url(#gc)" stroke-opacity="0.12" stroke-width="9"/><path d="M0 12 H372 V22 H566" fill="none" stroke="url(#gc)" stroke-opacity="0.40" stroke-width="3.5"/><path d="M0 12 H372 V22 H566" fill="none" stroke="url(#gc)" stroke-width="1.4"/>
+<path d="M1200 30 H828 V22 H634" fill="none" stroke="url(#go)" stroke-opacity="0.12" stroke-width="9"/><path d="M1200 30 H828 V22 H634" fill="none" stroke="url(#go)" stroke-opacity="0.40" stroke-width="3.5"/><path d="M1200 30 H828 V22 H634" fill="none" stroke="url(#go)" stroke-width="1.4"/>
+<circle cx="566" cy="22" r="6" fill="#6FE7FF" fill-opacity="0.25"/><rect x="563" y="19.5" width="6" height="5" rx="1" fill="#6FE7FF"/>
+<circle cx="634" cy="22" r="6" fill="#FF8A3D" fill-opacity="0.25"/><rect x="631" y="19.5" width="6" height="5" rx="1" fill="#FF8A3D"/>
+<g fill="#8FA3BF" fill-opacity=".7"><rect x="596" y="20.5" width="3" height="3"/><rect x="601" y="20.5" width="3" height="3"/></g>
+</svg>
