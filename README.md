@@ -170,7 +170,7 @@ Fast, accessible, and impossible to mistake for a template. The proof is public:
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/certs-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/certs-light.svg">
-  <img src="assets/certs-dark.svg" width="100%" alt="Credential log: 12 certifications from Anthropic, AWS, ClickHouse, LangChain and DeepLearning.AI, August 2025 to April 2026.">
+  <img src="assets/certs-dark.svg" width="100%" alt="Credentials by issuer: AWS ×5, Anthropic ×3, ClickHouse ×2, LangChain ×1, DeepLearning.AI ×1. Twelve certifications, seven verifiable online.">
 </picture>
 
 <p>
