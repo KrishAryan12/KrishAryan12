@@ -34,9 +34,7 @@ I also design and build **websites** for people who want theirs to say something
 <tr>
 <td width="50%" valign="top">
 
-<img src="https://img.shields.io/badge/production-private-6FE7FF?style=flat-square&labelColor=0B1220" alt="production, private">
-
-#### TraceLens
+#### TraceLens <img src="https://img.shields.io/badge/production-private-6FE7FF?style=flat-square&labelColor=0B1220" alt="production, private" align="right">
 
 An autonomous root-cause agent. A native ReAct loop on GPT-4o, no agent frameworks, **40+ tools across 12+ sources**. Ranked, confidence-scored hypotheses, a Jira ticket and a Slack summary, then the incident goes into a knowledge graph on Apache AGE. **1,094 tests.**
 
@@ -45,9 +43,7 @@ An autonomous root-cause agent. A native ReAct loop on GPT-4o, no agent framewor
 </td>
 <td width="50%" valign="top">
 
-<img src="https://img.shields.io/badge/production-private-6FE7FF?style=flat-square&labelColor=0B1220" alt="production, private">
-
-#### LogAgent
+#### LogAgent <img src="https://img.shields.io/badge/production-private-6FE7FF?style=flat-square&labelColor=0B1220" alt="production, private" align="right">
 
 A ReAct agent with read-only bash on the log server, reading **200k–30M lines per service per day**. No ingestion pipeline, no vector DB, no grep one-liners to regret later. Used by the SRE team.
 
@@ -58,9 +54,7 @@ A ReAct agent with read-only bash on the log server, reading **200k–30M lines 
 <tr>
 <td width="50%" valign="top">
 
-<img src="https://img.shields.io/badge/status-live-FF8A3D?style=flat-square&labelColor=0B1220" alt="live">
-
-#### Teardown
+#### Teardown <img src="https://img.shields.io/badge/status-live-FF8A3D?style=flat-square&labelColor=0B1220" alt="live" align="right">
 
 Paste a URL. A real browser renders it, **65 rules plus axe-core** pin every problem, and you get a fix list an AI coding agent can execute.
 
@@ -70,9 +64,7 @@ Paste a URL. A real browser renders it, **65 rules plus axe-core** pin every pro
 </td>
 <td width="50%" valign="top">
 
-<img src="https://img.shields.io/badge/status-live-FF8A3D?style=flat-square&labelColor=0B1220" alt="live">
-
-#### Stockroom
+#### Stockroom <img src="https://img.shields.io/badge/status-live-FF8A3D?style=flat-square&labelColor=0B1220" alt="live" align="right">
 
 Orders that survive concurrency: **row-locked transactions**, idempotent order creation, audit logs and request-ID JSON logging.
 
