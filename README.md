@@ -164,36 +164,22 @@ Fast, accessible, and impossible to mistake for a template. The proof is public:
 
 ### `06` &nbsp;Certified
 
-<p>
-  <img src="https://img.shields.io/badge/certifications-12-6FE7FF?style=for-the-badge&labelColor=0B1220" alt="12 certifications">
-  <img src="https://img.shields.io/badge/issuers-5-6FE7FF?style=for-the-badge&labelColor=0B1220" alt="5 issuers">
-  <img src="https://img.shields.io/badge/verifiable_online-7-FF8A3D?style=for-the-badge&labelColor=0B1220" alt="7 verifiable online">
-</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/certs-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/certs-light.svg">
+  <img src="assets/certs-dark.svg" width="100%" alt="Credential log: 12 certifications from Anthropic, AWS, ClickHouse, LangChain and DeepLearning.AI, August 2025 to April 2026.">
+</picture>
 
-<table>
-<tr><td valign="top"><img src="https://img.shields.io/badge/Anthropic-0B1220?style=for-the-badge&logo=anthropic&logoColor=D97757" alt="Anthropic"></td><td>
-<a href="https://verify.skilljar.com/c/h3uewwhjaepk"><b>Claude Code 101</b></a> <sub>↗</sub> &nbsp;<sub><code>APR 2026</code></sub><br>
-<a href="https://verify.skilljar.com/c/4aphiibon45o"><b>Model Context Protocol: Advanced Topics</b></a> <sub>↗</sub> &nbsp;<sub><code>AUG 2025</code></sub><br>
-<a href="https://verify.skilljar.com/c/nzmm3g8t9dbu"><b>Introduction to Model Context Protocol</b></a> <sub>↗</sub> &nbsp;<sub><code>AUG 2025</code></sub>
-</td></tr>
-<tr><td valign="top"><img src="https://img.shields.io/badge/AWS-0B1220?style=for-the-badge" alt="AWS"></td><td>
-<b>Integrating Amazon Bedrock powered Agents with MCP Servers using the Strands Agents SDK</b> &nbsp;<sub><code>OCT 2025</code></sub><br>
-<b>Operationalize Generative AI Applications (FMOps/LLMOps)</b> &nbsp;<sub><code>SEP 2025</code></sub><br>
-<b>Generative AI with Diffusion Models</b> &nbsp;<sub><code>SEP 2025</code></sub><br>
-<b>AWS Cloud Practitioner Essentials</b> &nbsp;<sub><code>SEP 2025</code></sub><br>
-<b>Getting Started with DevOps on AWS</b> &nbsp;<sub><code>AUG 2025</code></sub>
-</td></tr>
-<tr><td valign="top"><img src="https://img.shields.io/badge/ClickHouse-0B1220?style=for-the-badge&logo=clickhouse&logoColor=FFCC01" alt="ClickHouse"></td><td>
-<a href="https://www.credly.com/badges/c569bec6-94e8-4aea-995d-45ca5c1be0a3/public_url"><b>ClickHouse Database Associate</b></a> <sub>↗</sub> &nbsp;<sub><code>OCT 2025</code></sub><br>
-<a href="https://www.credly.com/badges/53ec6458-ecd6-416a-88b6-ad951bfd82fe/public_url"><b>chDB Professional</b></a> <sub>↗</sub> &nbsp;<sub><code>OCT 2025</code></sub>
-</td></tr>
-<tr><td valign="top"><img src="https://img.shields.io/badge/LangChain-0B1220?style=for-the-badge&logo=langchain&logoColor=white" alt="LangChain"></td><td>
-<a href="https://academy.langchain.com/certificates/8g0v1xpggw"><b>LangChain Essentials · Python</b></a> <sub>↗</sub> &nbsp;<sub><code>OCT 2025</code></sub>
-</td></tr>
-<tr><td valign="top"><img src="https://img.shields.io/badge/DeepLearning.AI-0B1220?style=for-the-badge" alt="DeepLearning.AI"></td><td>
-<a href="https://learn.deeplearning.ai/accomplishments/ceaf2f1f-0a34-4e96-9f2e-c6307022a4e3"><b>Knowledge Graphs for AI Agents: API Discovery</b></a> <sub>↗</sub> &nbsp;<sub><code>SEP 2025</code></sub>
-</td></tr>
-</table>
+<p>
+  <sub><b>VERIFY</b></sub>&nbsp;
+  <a href="https://verify.skilljar.com/c/h3uewwhjaepk"><img src="https://img.shields.io/badge/Claude_Code_101_↗-0B1220?style=flat-square&logo=anthropic&logoColor=D97757" alt="Verify Claude Code 101"></a>
+  <a href="https://verify.skilljar.com/c/4aphiibon45o"><img src="https://img.shields.io/badge/MCP:_Advanced_Topics_↗-0B1220?style=flat-square&logo=anthropic&logoColor=D97757" alt="Verify MCP: Advanced Topics"></a>
+  <a href="https://verify.skilljar.com/c/nzmm3g8t9dbu"><img src="https://img.shields.io/badge/Intro_to_MCP_↗-0B1220?style=flat-square&logo=anthropic&logoColor=D97757" alt="Verify Intro to MCP"></a>
+  <a href="https://www.credly.com/badges/c569bec6-94e8-4aea-995d-45ca5c1be0a3/public_url"><img src="https://img.shields.io/badge/ClickHouse_Associate_↗-0B1220?style=flat-square&logo=clickhouse&logoColor=FFCC01" alt="Verify ClickHouse Associate"></a>
+  <a href="https://www.credly.com/badges/53ec6458-ecd6-416a-88b6-ad951bfd82fe/public_url"><img src="https://img.shields.io/badge/chDB_Professional_↗-0B1220?style=flat-square&logo=clickhouse&logoColor=FFCC01" alt="Verify chDB Professional"></a>
+  <a href="https://academy.langchain.com/certificates/8g0v1xpggw"><img src="https://img.shields.io/badge/LangChain_Essentials_↗-0B1220?style=flat-square&logo=langchain&logoColor=2FB5A0" alt="Verify LangChain Essentials"></a>
+  <a href="https://learn.deeplearning.ai/accomplishments/ceaf2f1f-0a34-4e96-9f2e-c6307022a4e3"><img src="https://img.shields.io/badge/Knowledge_Graphs_for_AI_Agents_↗-0B1220?style=flat-square" alt="Verify Knowledge Graphs for AI Agents"></a>
+</p>
 
 ### `07` &nbsp;Published
 
