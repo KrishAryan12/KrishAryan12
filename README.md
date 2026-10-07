@@ -156,7 +156,7 @@ Fast, accessible, and impossible to mistake for a template. The proof is public:
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/KrishAryan12/KrishAryan12/stats/stats-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/KrishAryan12/KrishAryan12/stats/stats-light.svg">
-  <img src="https://raw.githubusercontent.com/KrishAryan12/KrishAryan12/stats/stats-dark.svg" width="100%" alt="GitHub activity over the last 365 days: contribution grid, totals and top languages, redrawn daily by a GitHub Action in this repo.">
+  <img src="https://raw.githubusercontent.com/KrishAryan12/KrishAryan12/stats/stats-dark.svg" width="100%" alt="GitHub activity over the last 365 days: contribution grid, totals and top languages, redrawn every 6 hours by a GitHub Action in this repo.">
 </picture>
 
 <picture>

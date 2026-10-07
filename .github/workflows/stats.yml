@@ -1,5 +1,5 @@
 # Redraws the telemetry panel every 6 hours and publishes it to the `stats` branch,
-# so the daily refresh never adds commits to main.
+# so the refresh never adds commits to main.
 name: stats
 
 on:

@@ -107,16 +107,16 @@ def summarise(user):
     }
 
 
-def render(s, t, today):
+def render(s, t, stamp):
     c = THEME[t]
     W, H = 1200, 316
     o = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-labelledby="t">',
          f'<title id="t">GitHub activity, last 365 days: {s["contributions"]} contributions, {s["commits"]} commits, {s["prs"]} pull requests, '
-         f'{s["repos"]} public repositories, longest streak {s["longest"]} days. Updated {today}.</title>',
+         f'{s["repos"]} public repositories, longest streak {s["longest"]} days. Updated {stamp}.</title>',
          f'<rect x=".5" y=".5" width="{W-1}" height="{H-1}" rx="14" fill="{c["bg"]}" stroke="{c["edge"]}"/>',
          f'<g font-family="{MONO}" font-size="12" letter-spacing="2.5" fill="{c["mute"]}">'
          f'<text x="34" y="44">TELEMETRY · LAST 365 DAYS</text>'
-         f'<text x="1166" y="44" text-anchor="end">REGENERATED DAILY · {today}</text></g>']
+         f'<text x="1166" y="44" text-anchor="end">REDRAWN EVERY 6 H · {stamp}</text></g>']
 
     # contribution grid, one cell per day; the busiest day is lit orange
     days = [d for w in s["weeks"] for d in w["contributionDays"]]
@@ -180,11 +180,11 @@ def main():
     else:
         user, out = fetch(sys.argv[1], os.environ["GITHUB_TOKEN"]), sys.argv[2]
     s = summarise(user)
-    today = dt.date.today().isoformat()
+    stamp = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     os.makedirs(out, exist_ok=True)
     for t in THEME:
         with open(os.path.join(out, f"stats-{t}.svg"), "w", encoding="utf-8", newline="\n") as f:
-            f.write(render(s, t, today))
+            f.write(render(s, t, stamp))
 
 
 if __name__ == "__main__":
